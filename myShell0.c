@@ -12,6 +12,20 @@
 #define MAXARGS 20
 
 /////////// reading commands:
+void describe_input(char *argv[],int argc)
+{
+     switch (argc)
+   {
+     case 0 : printf("No arguments\n");
+              break;
+     case 1 : printf("One argument: %s\n", argv[0]);
+              break;
+     default : printf("%s %d arguments: ", argv[0],argc-1);
+               for (int i=1; i<argc; i++) printf("%s ", argv[i]);
+               printf("\n");
+               break;
+}
+}
 
 int read_args(int* argcp, char* args[], int max, int* eofp)
 {
@@ -64,8 +78,13 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
 
 int execute(int argc, char *argv[])
 {
-        printf("executs something\n");
+    describe_input(argv, argc);
 }
+int execute2(int argc, char *argv[])
+{
+    describe_input(argv, argc);
+}
+
 
 int main ()
 {
@@ -77,6 +96,7 @@ int main ()
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
+         
          execute(argc, args);
       }
       if (eof) exit(0);
