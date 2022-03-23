@@ -11,7 +11,7 @@
 #define MAXLINE 200
 #define MAXARGS 20
 
-/////////// reading commands:
+/////////// reading commands: hello
 void describe_input(char *argv[],int argc)
 {
      switch (argc)
