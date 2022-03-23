@@ -1,0 +1,54 @@
+Murder at the terminal express
+
+- main directory (murder at the criminal express)   
+                    
+
+        introduction(situation, objectif,description of rooms, travelers (description background ) )
+                    ANSEWER 
+                    DISCOVER
+
+    -directories (rooms of the train) , linear tree
+        -several files (clues , people, CRIME SCENE / ROOMS ...)
+        
+
+
+
+6 workers (sucurity agent, driver*2 ,barman,cleaner) 
+ROOMS:
+    Cafeteria
+        Barman 
+        strange substance
+        broken glass
+    Crime scene 
+        mark
+        cadavre
+        weapon knife...
+        lost (object of the criminal : ring lighter ...)
+    head of the train 
+        driver
+    lounge 6(suspects)   (description, strory and accusation)
+        Millan : glasses,earrings,insomnia, 50 accuse Alvaro
+        Ahmed: glasses , smoke,married,43 
+        Alvaro: married toxicoman ,30
+        Alex: long hair anxiety,17 accuse Edurne 
+        Wiame: long hair , pregnant,27  accuse:ahmed 
+        Edurne assasin: earings,dog, middle age woman, accuse Millan 
+         
+
+        
+    
+    bathroom
+                luggage lounge Room  staffroom bathroom (read files)   cd.. <- crime scene  -> cd   Cafeteria   smoking area  head of the train
+    |||_____---
+    link/unlink: interrogation different room 
+    stat: the person with anxiety
+    lseek: interact with people (wich information we want )
+    fork: anxiety
+    readdi execl???????
+    pipes:
+
+    additionl an easy  things we can do to compensate :
+        changing colors (when we cwrite the criminal name )
+        time management (20 min to resolve the riddle )
+        & (invoke 2 parts of the file physical & moral description )
+        
