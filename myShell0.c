@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
+#include "talk.c"
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
@@ -14,16 +15,19 @@
 /////////// reading commands: hello
 void describe_input(char *argv[],int argc)
 {
-     switch (argc)
+   talk(argv[1],argv[2]);
+    switch (argc)
    {
      case 0 : printf("No arguments\n");
               break;
      case 1 : printf("One argument: %s\n", argv[0]);
+              
               break;
      default : printf("%s %d arguments: ", argv[0],argc-1);
                for (int i=1; i<argc; i++) printf("%s ", argv[i]);
                printf("\n");
                break;
+   
 }
 }
 
@@ -82,7 +86,26 @@ int execute(int argc, char *argv[])
 }
 int execute2(int argc, char *argv[])
 {
-    describe_input(argv, argc);
+   int function=0 ;
+   if(!strcmp(argv[0], "talk")) {
+      function=1;
+   }
+   switch (function)
+   {
+     case 0 : printf("That comand doesnt exist\n");
+              break;
+     case 1 : if(argc==3) {
+                  talk(argv[1],argv[2]);
+               }
+               else{
+                  printf("%d arguments: ",argc);
+                  printf("This command needs the name of the person you are talking with and what you want to talk about\n");
+               }  
+               break;         
+              
+     default : 
+               break;
+   }
 }
 
 
@@ -97,7 +120,7 @@ int main ()
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
          
-         execute(argc, args);
+         execute2(argc, args);
       }
       if (eof) exit(0);
    }
