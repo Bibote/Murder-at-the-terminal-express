@@ -1,0 +1,38 @@
+int lookAround(char dirname[], char const *ext)
+
+{
+    printf("In this room you can see:");
+    DIR *d = NULL;
+    struct dirent *dir = NULL;
+
+    d = opendir(dirname);
+
+    if (d)
+    {
+        while ((dir = readdir(d)) != NULL)
+        {
+            if (has_extension(dir->d_name, ext))
+            {
+                printf("%s\n", dir->d_name);
+            }
+        }
+        closedir(d);
+    }
+    return(0);
+}
+
+
+const char* acutalDir(){
+    char path[] = pwd();
+
+    int i = 0;
+    char *p = strtok (path, "/");
+    char *array[3];
+
+    while (p != NULL)
+    {
+        array[i++] = p;
+        p = strtok (NULL, "/");
+    }
+    return array[i];
+}

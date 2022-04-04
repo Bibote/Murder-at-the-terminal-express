@@ -7,6 +7,7 @@
 #include <string.h>
 #include <errno.h>
 #include "talk.c"
+#include "lookAround.c"
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
@@ -89,21 +90,29 @@ int execute2(int argc, char *argv[])
    int function=0 ;
    if(!strcmp(argv[0], "talk")) {
       function=1;
+   } else if (!strcmp(argv[0], "lookAround"))
+   {
+      function=2;
    }
+   
    switch (function)
    {
-     case 0 : printf("That comand doesnt exist\n");
-              break;
-     case 1 : if(argc==3) {
-                  talk(argv[1],argv[2]);
-               }
-               else{
-                  printf("%d arguments: ",argc);
-                  printf("This command needs the name of the person you are talking with and what you want to talk about\n");
-               }  
-               break;         
-              
-     default : 
+      case 0 : printf("That comand doesnt exist\n");
+         break;
+      case 1 : 
+         if(argc==3) {
+            talk(argv[1],argv[2]);
+         }else{
+            printf("%d arguments: ",argc);
+            printf("This command needs the name of the person you are talking with and what you want to talk about\n");
+         }  
+         break;
+      case 2:
+         if(argc==1){
+            lookAround(acutalDir(),txt); 
+         }
+         break;
+      default : 
                break;
    }
 }
