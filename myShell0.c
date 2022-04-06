@@ -7,29 +7,11 @@
 #include <string.h>
 #include <errno.h>
 #include "talk.c"
+#include "functions.h"
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
 #define MAXARGS 20
-
-/////////// reading commands: hello
-void describe_input(char *argv[],int argc)
-{
-   talk(argv[1],argv[2]);
-    switch (argc)
-   {
-     case 0 : printf("No arguments\n");
-              break;
-     case 1 : printf("One argument: %s\n", argv[0]);
-              
-              break;
-     default : printf("%s %d arguments: ", argv[0],argc-1);
-               for (int i=1; i<argc; i++) printf("%s ", argv[i]);
-               printf("\n");
-               break;
-   
-}
-}
 
 int read_args(int* argcp, char* args[], int max, int* eofp)
 {
@@ -78,11 +60,16 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
    return 1;
 }
 
-///////////////////////////////////////
+
 
 int execute(int argc, char *argv[])
 {
-    describe_input(argv, argc);
+   if (argv[0] == NULL) return 0;
+   else if (!strcmp(argv[0],"go"))
+   {
+      return go(argc,argv);
+   }
+   else printf("wrong command");   
 }
 int execute2(int argc, char *argv[])
 {
@@ -115,12 +102,11 @@ int main ()
    int eof= 0;
    int argc;
    char *args[MAXARGS];
-
+   init();
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
-         
-         execute2(argc, args);
+         execute(argc, args);
       }
       if (eof) exit(0);
    }
