@@ -1,17 +1,21 @@
 // myShell0
 //////////////////////////////////////////////////
-
+#define _XOPEN_SOURCE 700
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
-#include "talk.c"
 #include "functions.h"
+#include<sys/wait.h>
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
 #define MAXARGS 20
+#define MAX_PATH 200
+#define ROUTE 
+
+char route[80];
 
 int read_args(int* argcp, char* args[], int max, int* eofp)
 {
@@ -64,35 +68,36 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
 
 int execute(int argc, char *argv[])
 {
-   if (argv[0] == NULL) return 0;
-   else if (!strcmp(argv[0],"go"))
-   {
-      return go(argc,argv);
+   pid_t pid;
+   int i;
+   char function[80];
+   strcpy(function, argv[0]);
+   char ruta[80];
+   strcpy(ruta, route);
+   strcat(ruta, "/");
+   strcat(ruta, function);
+   if(!strcmp(argv[0],"go")) {
+    pid=fork();
+    if (pid==0) {
+         i=execv(ruta,argv);
+       if(i=-1) {
+            printf("That command doesn't exist");
+         }
+       printf("\n");
+       exit(pid);
+    }
+    else {
+        wait(NULL);
+     }
    }
-   else printf("wrong command");   
-}
-int execute2(int argc, char *argv[])
-{
-   int function=0 ;
-   if(!strcmp(argv[0], "talk")) {
-      function=1;
+   else {
+       i=execv(ruta,argv);
+       if(i=-1) {
+            printf("That command doesn't exist");
+         }
+       printf("\n");
    }
-   switch (function)
-   {
-     case 0 : printf("That comand doesnt exist\n");
-              break;
-     case 1 : if(argc==3) {
-                  talk(argv[1],argv[2]);
-               }
-               else{
-                  printf("%d arguments: ",argc);
-                  printf("This command needs the name of the person you are talking with and what you want to talk about\n");
-               }  
-               break;         
-              
-     default : 
-               break;
-   }
+   
 }
 
 
@@ -102,12 +107,21 @@ int main ()
    int eof= 0;
    int argc;
    char *args[MAXARGS];
-   init();
+   char cwd[MAX_PATH];
+   
+   
+   strcpy(route, getcwd(cwd, sizeof(cwd)));
+   printf(route);
+   //init();
+   
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
          execute(argc, args);
+         printf(getcwd(cwd, sizeof(cwd)));
+         
       }
       if (eof) exit(0);
    }
 }
+

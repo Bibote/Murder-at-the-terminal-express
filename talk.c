@@ -1,45 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
 
-int talk(char nombre[],char about[]) {
-    char archivo[50];
+int main(int argc, char* argv[])
+{
+    if(argc==2){
+        if(!strcmp(argv[1], "help")) {
+        printf("To talk with someone you will need to write their name, and what do you want to talk a about(physical/moral/identity/accusation), you need to be in the same room of the person you want to talk with.");
+        printf("\n");
+        printf("Remember that names start with Capital letters!!");
+        printf("\n");
+        return 1;
+        }
+        else{
+            printf("Wrong ammount of parameters");
+            return 0;
+        }
+    }
+
+    if(argc!=3){
+        printf("Wrong ammount of parameters");
+        return 0;
+    }
     int offset;
     FILE *fp;
-    printf("Using talk function");
-    if(!strcmp(nombre, "Millan")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Millan.txt","r");
-    }
-    else if(!strcmp(nombre, "Ahmed")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Ahmed.txt","r");
-    }else if(!strcmp(nombre, "Alex")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Alex.txt","r");
-    }else if(!strcmp(nombre, "Alvaro")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Alvaro.txt","r");
-    }else if(!strcmp(nombre, "Wiam")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Wiam.txt","r");
-    }else if(!strcmp(nombre, "Edurne")) {
-        fp = fopen("launch directory/Crime scene/Staffroom/LoungeRoom/Edurne.txt","r");
-    }
-    else {
-        printf("There is no one with that name");
-        return 0;
-    }
+    char name[80];
+    strcpy(name, argv[1]);
+    strcat(name, ".txt");
+    fp = fopen(name,"r");
     if (fp == NULL) {
-        printf("wrong path");
-        return 0;
+        printf("There is no one with that name in the room with you");
+        printf("\n");
+        return 1;
     }
-    if(!strcmp(about, "physical")) {
+    if(!strcmp(argv[2], "physical")) {
         offset=0;
     }
-    else if(!strcmp(about, "moral")) {
-        offset=32;
+    else if(!strcmp(argv[2], "moral")) {
+        offset=36;
     }
-    else if(!strcmp(about, "Identity")) {
+    else if(!strcmp(argv[2], "identity")) {
         offset=52;
     }
-    else if(!strcmp(about, "accusation")) {
+    else if(!strcmp(argv[2], "accusation")) {
         offset=52;
     }
     else {
-        printf("They wont talk about that");
+        printf("He/She doesn`t want to talk about that");
+        printf("\n");
         return 0;
     }
     fseek( fp, offset, 1 );
@@ -50,12 +60,11 @@ int talk(char nombre[],char about[]) {
         // Checking for end of file
         if (feof(fp) || c=='.')
             break;
- 
         printf("%c", c);
 
     } while(1);
     fclose(fp);
+    printf("\n");
     return(1);
-
 
 }
