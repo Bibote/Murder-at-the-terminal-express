@@ -117,7 +117,7 @@ int main ()
             char newPrompt[30]="";
             Prompt= strcat(newPrompt,args[1]);
             strcat(Prompt, ">> ");
-         
+         // store the last directory 
             }
          }
    else{
