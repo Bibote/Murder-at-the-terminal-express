@@ -111,11 +111,18 @@ int main ()
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
          if (!strcmp(args[0],"go"))
-   {
-      go(argc,args);
-   }
+         {
+            if(go(argc,args)){
+            //const char*newPrompt=args[1];
+            char newPrompt[30]="";
+            Prompt= strcat(newPrompt,args[1]);
+            strcat(Prompt, ">> ");
+         
+            }
+         }
    else{
          execute(argc, args);
+         
    } 
       }
       if (eof) exit(0);

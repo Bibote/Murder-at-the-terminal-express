@@ -8,18 +8,25 @@
 
 bool go (int argc, char *argv[])
 {
-   //system("clear");
+   system("clear");
    // changer current directory
    
    
       argc--;
+
 
       if (argc == 1)
       {
           
         char s[200];
         printf("%s\n",getcwd(s,200));
-        chdir(argv[1]);
+        if ( chdir(argv[1]) == -1 )
+        {
+           printf("there is no such place in the train\n");
+           return false;
+        }
+        
+        
         printf("%s\n",getcwd(s,200));
         return true;
         
@@ -37,6 +44,4 @@ bool go (int argc, char *argv[])
          fprintf(stderr, "Error: Too many arguments\n");
          return false;
       }
-   
-   
 }
