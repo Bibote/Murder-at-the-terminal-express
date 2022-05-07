@@ -6,8 +6,9 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
-#include "functions.h"
 #include<sys/wait.h>
+#include"go.c"
+#include"init.c"
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
@@ -76,7 +77,6 @@ int execute(int argc, char *argv[])
    strcpy(ruta, route);
    strcat(ruta, "/");
    strcat(ruta, function);
-   if(!strcmp(argv[0],"go")) {
     pid=fork();
     if (pid==0) {
          i=execv(ruta,argv);
@@ -89,14 +89,8 @@ int execute(int argc, char *argv[])
     else {
         wait(NULL);
      }
-   }
-   else {
-       i=execv(ruta,argv);
-       if(i=-1) {
-            printf("That command doesn't exist");
-         }
-       printf("\n");
-   }
+   
+   
    
 }
 
@@ -110,16 +104,19 @@ int main ()
    char cwd[MAX_PATH];
    
    
-   strcpy(route, getcwd(cwd, sizeof(cwd)));
-   printf(route);
-   //init();
+   strcpy(route, getcwd(cwd,sizeof(cwd)));
+   init();
    
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
+         if (!strcmp(args[0],"go"))
+   {
+      go(argc,args);
+   }
+   else{
          execute(argc, args);
-         printf(getcwd(cwd, sizeof(cwd)));
-         
+   } 
       }
       if (eof) exit(0);
    }
