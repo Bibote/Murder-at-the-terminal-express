@@ -1,0 +1,40 @@
+◦ Input/Output and file system
+management
+	▪ System calls
+		• open(used:talk)modify
+		• read(no used(To end the game))
+		• write(no used(To say who u think the assasin is))
+		• close(used:talk)modify
+		• link(no used (talk with people)
+		• unlink(no used (talk with people)
+		• stat(no used(modify talk so u cant talk witht the train driver))
+		• readdir(used:lookaround/wheretogo)
+		• lseek(used:talk)modify
+	▪C library functions
+		• opendir(used:lookaround/wheretogo)
+		• closedir(used:lookaround/wheretogo)
+◦ Process management
+	▪ System calls
+		• fork(used:shell)
+		• wait(used:shell)
+	▪ C library functions
+		• execlp or execvp(used in shell(execv))
+
+There should be an option to concatenate commands with pipes.
+• Each of the commands created should work on their own, they should be independent
+programs.
+• The users should have the option to list the last movements done (last commands used).
+• All possible error should be handled and users should be informed about the reason of the
+error. For example:
+▪ $ ls añsldk
+ls: cannot access añsldk: No such file or directory
+• Every command should have a man page with its specification.
+
+Millán:modify talk function to used sys calls and stat
+Alex:last movements/prepare the files and directories(permisions and create the objects)
+Ahmed:link/unlink
+Wiame:read/write
+Alvaro:pipes
+
+
+
