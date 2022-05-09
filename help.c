@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <limits.h>
 void main(void){
-    printf("A list of the usable commands:")
+    printf("A list of the usable commands:");
     printf("ls: Used to lookaround objects ");
     printf("pwd: Shows working directory ");
     printf("talk: Allows to talk with the different people");
