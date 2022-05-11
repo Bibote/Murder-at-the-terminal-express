@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
  # Este programa fue construido para i386-pc-mingw32
  
 
-# Base de datos del Make, mostrada en Wed May 11 13:50:31 2022
+# Base de datos del Make, mostrada en Wed May 11 16:09:50 2022
 
 # Variables
 
@@ -33,14 +33,13 @@ HOMEDRIVE = C:
 # autom�tica/o
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile
-CURDIR := c:/Users/x 
-elab/OneDrive/Documentos/Uni/Curso2/Cuatri2/IOS/Murder-at-the-terminal-express
+CURDIR := c:/Users/xelab/OneDrive/Documentos/Uni/Curso2/Cuatri2/IOS/Murder-at-the-terminal-express
 # por defecto
 SHELL := sh.exe
 # entorno
 WINDIR = C:\WINDOWS
 # entorno
-VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"81204e1a79a1a53aa2a74c293087d05a.es","_translationsConfigFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\tcf.json","_cacheRoot":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es","_resolvedLanguagePackCoreLocation":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"125a9a608456aa5e8a25d0a18c7b1d68.es","_translationsConfigFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\125a9a608456aa5e8a25d0a18c7b1d68.es\\tcf.json","_cacheRoot":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\125a9a608456aa5e8a25d0a18c7b1d68.es","_resolvedLanguagePackCoreLocation":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\125a9a608456aa5e8a25d0a18c7b1d68.es\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\125a9a608456aa5e8a25d0a18c7b1d68.es\\corrupted.info","_languagePackSupport":true}
 # makefile (de `makefile', l�nea 19):
 CFLAGS = -Wall
 # entorno
@@ -49,6 +48,8 @@ ONEDRIVE = C:\Users\xelab\OneDrive
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (de `makefile', l�nea 1):
 MAKEFILE_LIST :=  makefile
+# entorno
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # entorno
 TMP = C:\Users\xelab\AppData\Local\Temp
 # makefile (de `makefile', l�nea 15):
@@ -62,7 +63,7 @@ OBJS = $(OBJ_DIR)/talk.o $(OBJ_DIR)/history.o $(OBJ_DIR)/help.o $(OBJ_DIR)/lookA
 # entorno
 PROGRAMDATA = C:\ProgramData
 # entorno
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-fa2d0f5c-0c68-4c93-8ec5-04f46ffd7dbc-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-7d9783b2-e55d-4c67-95d7-e4c0ec4df74b-sock
 # entorno
 VSCODE_CWD = C:\Users\xelab\AppData\Local\Programs\Microsoft VS Code
 # entorno
@@ -88,7 +89,7 @@ ELECTRON_RUN_AS_NODE = 1
 # autom�tica/o
 %F = $(notdir $%)
 # entorno
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12128_YURHZQRGGWFORJYR
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6668_DKDECLUIXFGNVDGR
 # entorno
 VSCODE_PIPE_LOGGING = true
 # entorno
@@ -112,7 +113,7 @@ GOOGLE_DEFAULT_CLIENT_ID = no
 # entorno
 VSCODE_CODE_CACHE_PATH = C:\Users\xelab\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # entorno
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # entorno
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # entorno
@@ -180,8 +181,6 @@ PLATFORMCODE = KV
 # entorno
 APPDATA = C:\Users\xelab\AppData\Roaming
 # entorno
-__COMPAT_LAYER = DetectorsAppHealth
-# entorno
 TEMP = C:\Users\xelab\AppData\Local\Temp
 # makefile (de `makefile', l�nea 14):
 SRCFS = $(BIN_DIR)/talk $(BIN_DIR)/history $(BIN_DIR)/help $(BIN_DIR)/lookAround $(BIN_DIR)/pwd $(BIN_DIR)/wheretogo
@@ -218,11 +217,13 @@ LANG = C
 # entorno
 PROCESSOR_LEVEL = 6
 # entorno
-VSCODE_PID = 12128
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# entorno
+VSCODE_PID = 6668
 # entorno
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-DU2S2TVN
 # estad�sticas del conjunto de variables de la tabla de hash:
-# Carga=104/1024=10%, Rehash=0, Colisiones=21/172=12%
+# Carga=105/1024=10%, Rehash=0, Colisiones=21/173=12%
 
 # Valores de variables espec�ficas al patr�n
 
@@ -262,8 +263,7 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-DU2S2TVN
 # Reglas impl�citas.
 
 obj/%.o: ./src/%.c
-#  comandos para ejecutar (de `makefile', linea  
-30):
+#  comandos para ejecutar (de `makefile', linea 30):
 	mkdir -p $(OBJ_DIR)
 	gcc -c -MD $(CFLAGS) $< -o $@
 	
@@ -309,7 +309,7 @@ obj/lookAround.o:
 # No es un objetivo:
 makefile:
 #  La b�squeda de reglas impl�citas ha sido efectuada.
-#  �ltima modificaci�n 2022-05-11 13:43:02
+#  �ltima modificaci�n 2022-05-11 13:51:14
 #  El archivo ha sido actualizado.
 #  Actualizado con �xito.
 # estad�sticas del conjunto de variables de la tabla de hash:
@@ -391,7 +391,7 @@ clean:
 #  El archivo no existe.
 #  El archivo ha sido actualizado.
 #  comandos para ejecutar (de `makefile', linea 38):
-	rm -f "./gameTree/history.txt"
+	rm -f "./History/history.txt"
 	rm -f orientexpress
 	rm -r -f $(OBJ_DIR)
 	rm -r -f $(BIN_DIR)
@@ -426,7 +426,10 @@ executables/wheretogo: obj/wheretogo.o
 #  El archivo ha sido actualizado.
 #  comandos para ejecutar (de `makefile', linea 26):
 	mkdir -p $(BIN_DIR)
-	gcc -O2 $(CFLAGS)  -o $@ $<
+	gcc -O2 $(CFLAGS)   
+make.exe: *** No hay ninguna regla para construir el objetivo `all'.  Alto.
+
+-o $@ $<
 	
 
 # estad�sticas de la tabla de hash de los archivos:
@@ -442,8 +445,6 @@ executables/wheretogo: obj/wheretogo.o
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Se termina la base de datos de Make en Wed May 11 13:50:31 2022
+# Se termina la base de datos de Make en Wed May 11 16:09:50 2022
 
  
-make.exe: *** No hay ninguna regla para construir el objetivo `all'.  Alto.
-
