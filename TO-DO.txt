@@ -1,15 +1,15 @@
 ◦ Input/Output and file system
 management
 	▪ System calls
-		• open(used:talk)modify
+		• open(used:talk)
 		• read(no used(To end the game))
 		• write(no used(To say who u think the assasin is))
-		• close(used:talk)modify
+		• close(used:talk)
 		• link(no used (talk with people)
 		• unlink(no used (talk with people)
 		• stat(no used(modify talk so u cant talk witht the train driver))
 		• readdir(used:lookaround/wheretogo)
-		• lseek(used:talk)modify
+		• lseek(used:talk)
 	▪C library functions
 		• opendir(used:lookaround/wheretogo)
 		• closedir(used:lookaround/wheretogo)

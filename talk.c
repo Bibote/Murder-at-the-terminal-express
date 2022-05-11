@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
+#include <fcntl.h>
+
 
 int main(int argc, char* argv[])
 {
@@ -25,12 +27,16 @@ int main(int argc, char* argv[])
         return 0;
     }
     int offset;
-    FILE *fp;
+    int fd;
     char name[80];
     strcpy(name, argv[1]);
     strcat(name, ".txt");
-    fp = fopen(name,"r");
-    if (fp == NULL) {
+
+    struct stat sfile;
+    stat(name, &sfile);
+    printf("st_mode = %o",sfile.st_size);
+    fd = open(name,O_RDONLY);
+    if (fd == -1) {
         printf("There is no one with that name in the room with you");
         printf("\n");
         return 1;
@@ -52,18 +58,19 @@ int main(int argc, char* argv[])
         printf("\n");
         return 0;
     }
-    fseek( fp, offset, 1 );
-    do {
-        // Taking input single character at a time
-        char c = fgetc(fp);
- 
-        // Checking for end of file
-        if (feof(fp) || c=='.')
-            break;
-        printf("%c", c);
+    
+    lseek (fd, offset, SEEK_SET);
+    static char buff[10000];
+    int i=0;
+    while (read(fd,buff+i,1) == 1) {
+        
+       if (buff[i]=='.') break;  // correct line
+       i++;
+    }
+    printf("%s\n",buff);
 
-    } while(1);
-    fclose(fp);
+    
+    close(fd);
     printf("\n");
     return(1);
 
