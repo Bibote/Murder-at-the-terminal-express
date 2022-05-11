@@ -3,7 +3,7 @@ management
 	▪ System calls
 		• open(used:talk)modify
 		• read(no used(To end the game))
-		• write(no used(To say who u think the assasin is))
+		• write(used: history(funtion and shell))
 		• close(used:talk)modify
 		• link(no used (talk with people)
 		• unlink(no used (talk with people)
