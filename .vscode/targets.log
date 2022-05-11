@@ -1,0 +1,449 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# Este es software libre; consulte en el c�digo fuente las condiciones de copia.
+# NO hay garant�a; ni siquiera para MERCANTIBILIDAD o EL CUMPLIMIENTO DE
+# ALG�N PROP�SITO PARTICULAR.
+
+ # Este programa fue construido para i386-pc-mingw32
+ 
+
+# Base de datos del Make, mostrada en Wed May 11 13:50:31 2022
+
+# Variables
+
+# autom�tica/o
+<D = $(patsubst %/,%,$(dir $<))
+# autom�tica/o
+?F = $(notdir $?)
+# makefile
+MAKEFLAGS = Rrqp
+# entorno
+VSCODE_LOG_NATIVE = false
+# makefile (de `makefile', l�nea 1):
+TARGET = orientexpress
+# autom�tica/o
+?D = $(patsubst %/,%,$(dir $?))
+# autom�tica/o
+@D = $(patsubst %/,%,$(dir $@))
+# entorno
+HOMEDRIVE = C:
+# autom�tica/o
+@F = $(notdir $@)
+# autom�tica/o
+^D = $(patsubst %/,%,$(dir $^))
+# makefile
+CURDIR := c:/Users/x 
+elab/OneDrive/Documentos/Uni/Curso2/Cuatri2/IOS/Murder-at-the-terminal-express
+# por defecto
+SHELL := sh.exe
+# entorno
+WINDIR = C:\WINDOWS
+# entorno
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"81204e1a79a1a53aa2a74c293087d05a.es","_translationsConfigFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\tcf.json","_cacheRoot":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es","_resolvedLanguagePackCoreLocation":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\xelab\\AppData\\Roaming\\Code\\clp\\81204e1a79a1a53aa2a74c293087d05a.es\\corrupted.info","_languagePackSupport":true}
+# makefile (de `makefile', l�nea 19):
+CFLAGS = -Wall
+# entorno
+ONEDRIVE = C:\Users\xelab\OneDrive
+# entorno
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (de `makefile', l�nea 1):
+MAKEFILE_LIST :=  makefile
+# entorno
+TMP = C:\Users\xelab\AppData\Local\Temp
+# makefile (de `makefile', l�nea 15):
+OBJ_DIR = ./obj
+# entorno
+VSCODE_VERBOSE_LOGGING = true
+# entorno
+PROGRAMW6432 = C:\Program Files
+# makefile (de `makefile', l�nea 8):
+OBJS = $(OBJ_DIR)/talk.o $(OBJ_DIR)/history.o $(OBJ_DIR)/help.o $(OBJ_DIR)/lookAround.o $(OBJ_DIR)/pwd.o $(OBJ_DIR)/wheretogo.o
+# entorno
+PROGRAMDATA = C:\ProgramData
+# entorno
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-fa2d0f5c-0c68-4c93-8ec5-04f46ffd7dbc-sock
+# entorno
+VSCODE_CWD = C:\Users\xelab\AppData\Local\Programs\Microsoft VS Code
+# entorno
+PATH = C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\GNAT\2020\bin;C:\Program Files\Wolfram Research\WolframScript\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\xelab\AppData\Local\Microsoft\WindowsApps;C:\Users\xelab\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\xelab\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\GnuWin32\bin;
+# entorno
+ONLINESERVICES = Online Services
+# entorno
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# entorno
+PROCESSOR_ARCHITECTURE = x86
+# entorno
+USERPROFILE = C:\Users\xelab
+# entorno
+ALLUSERSPROFILE = C:\ProgramData
+# entorno
+VSCODE_LOG_STACK = false
+# entorno
+NUMBER_OF_PROCESSORS = 8
+# entorno
+ELECTRON_RUN_AS_NODE = 1
+# por defecto
+.FEATURES := target-specific order-only second-expansion else-if archives
+# autom�tica/o
+%F = $(notdir $%)
+# entorno
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12128_YURHZQRGGWFORJYR
+# entorno
+VSCODE_PIPE_LOGGING = true
+# entorno
+COMPUTERNAME = LAPTOP-DU2S2TVN
+# entorno
+GOOGLE_API_KEY = no
+# entorno
+PROGRAMFILES = C:\Program Files (x86)
+# entorno
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# entorno
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# entorno
+USERNAME = xelab
+# entorno
+PUBLIC = C:\Users\Public
+# entorno
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# entorno
+GOOGLE_DEFAULT_CLIENT_ID = no
+# entorno
+VSCODE_CODE_CACHE_PATH = C:\Users\xelab\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+# entorno
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# entorno
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# entorno
+LOGONSERVER = \\LAPTOP-DU2S2TVN
+# entorno
+ONEDRIVECONSUMER = C:\Users\xelab\OneDrive
+# entorno
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# entorno
+USERDOMAIN = LAPTOP-DU2S2TVN
+# por defecto
+MAKE = $(MAKE_COMMAND)
+# por defecto
+MAKECMDGOALS := all
+# por defecto
+MAKE_VERSION := 3.81
+# makefile
+.DEFAULT_GOAL := orientexpress
+# entorno
+GOOGLE_DEFAULT_CLIENT_SECRET = no
+# entorno
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# autom�tica/o
+%D = $(patsubst %/,%,$(dir $%))
+# entorno
+LOCALAPPDATA = C:\Users\xelab\AppData\Local
+# entorno
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# por defecto
+MAKE_COMMAND := make.exe
+# entorno
+PROCESSOR_ARCHITEW6432 = AMD64
+# por defecto
+.VARIABLES := 
+# autom�tica/o
+*F = $(notdir $*)
+# entorno
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+# entorno
+OS = Windows_NT
+# entorno
+VSCODE_IPC_HOOK = \\.\pipe\9127842cfa09e75fb35905f4ec437482-1.67.1-main-sock
+# entorno
+HOMEPATH = \Users\xelab
+# entorno
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# entorno
+PROMPT = $P$G
+# entorno
+MFLAGS = -Rrqp
+# autom�tica/o
+*D = $(patsubst %/,%,$(dir $*))
+# entorno
+REGIONCODE = EMEA
+# makefile (de `makefile', l�nea 2):
+MAIN = $(SRC_DIR)/myshell0.c
+# entorno
+SYSTEMROOT = C:\WINDOWS
+# autom�tica/o
++D = $(patsubst %/,%,$(dir $+))
+# entorno
+PLATFORMCODE = KV
+# autom�tica/o
++F = $(notdir $+)
+# entorno
+APPDATA = C:\Users\xelab\AppData\Roaming
+# entorno
+__COMPAT_LAYER = DetectorsAppHealth
+# entorno
+TEMP = C:\Users\xelab\AppData\Local\Temp
+# makefile (de `makefile', l�nea 14):
+SRCFS = $(BIN_DIR)/talk $(BIN_DIR)/history $(BIN_DIR)/help $(BIN_DIR)/lookAround $(BIN_DIR)/pwd $(BIN_DIR)/wheretogo
+# entorno
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# por defecto
+MAKEFILES := 
+# makefile (de `makefile', l�nea 16):
+SRC_DIR = ./src
+# autom�tica/o
+<F = $(notdir $<)
+# entorno
+VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
+# makefile (de `makefile', l�nea 18):
+PROGS = $(patsubst %.c,%,$(OBJ_DIR))
+# makefile (de `makefile', l�nea 17):
+BIN_DIR = ./executables
+# entorno
+LC_ALL = C
+# autom�tica/o
+^F = $(notdir $^)
+# por defecto
+SUFFIXES := 
+# entorno
+SYSTEMDRIVE = C:
+# entorno
+SESSIONNAME = Console
+# entorno
+PROCESSOR_REVISION = 8e0a
+# entorno
+MAKELEVEL := 0
+# entorno
+LANG = C
+# entorno
+PROCESSOR_LEVEL = 6
+# entorno
+VSCODE_PID = 12128
+# entorno
+USERDOMAIN_ROAMINGPROFILE = LAPTOP-DU2S2TVN
+# estad�sticas del conjunto de variables de la tabla de hash:
+# Carga=104/1024=10%, Rehash=0, Colisiones=21/172=12%
+
+# Valores de variables espec�ficas al patr�n
+
+# No hay valores de variables espec�ficas al patr�n.
+
+# Directorios
+
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\ (llave C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/, mtime 1540032174): 8 archivos, no imposibilidades.
+# C:\Program Files\Wolfram Research\WolframScript\ (llave C:/Program Files/Wolfram Research/WolframScript/, mtime 1604678762): 5 archivos, no imposibilidades.
+# C:\windows\System32\WindowsPowerShell\v1.0\ (llave C:/windows/System32/WindowsPowerShell/v1.0/, mtime 1602852444): 30 archivos, no imposibilidades.
+# C:\windows\System32\Wbem (llave C:/windows/System32/Wbem, mtime 1647460661): 155 archivos, no imposibilidades.
+# . (llave c:/Users/xelab/OneDrive/Documentos/Uni/Curso2/Cuatri2/IOS/Murder-at-the-terminal-express, mtime 1652269426): 30 archivos, no imposibilidades.
+# C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (llave C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1532902192): 10 archivos, no imposibilidades.
+# C:\GNAT\2020\bin: podr�a no estar establecido.
+# C:\Program Files\MySQL\MySQL Shell 8.0\bin\ (llave C:/Program Files/MySQL/MySQL Shell 8.0/bin/, mtime 1646817737): 9 archivos, no imposibilidades.
+# C:\Users\xelab\AppData\Local\Programs\Microsoft VS Code\bin (llave C:/Users/xelab/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1652260632): 4 archivos, no imposibilidades.
+# ./src: podr�a no estar establecido.
+# C:\Program Files\Intel\Intel(R) Management Engine Components\IPT (llave C:/Program Files/Intel/Intel(R) Management Engine Components/IPT, mtime 1540032169): 5 archivos, no imposibilidades.
+# C:\windows\System32\OpenSSH\: podr�a no estar establecido.
+# C:\Program Files\PuTTY\ (llave C:/Program Files/PuTTY/, mtime 1637402708): 12 archivos, no imposibilidades.
+# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (llave C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1620228547): 5 archivos, no imposibilidades.
+# C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (llave C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1540032169): 4 archivos, no imposibilidades.
+# C:\windows (llave C:/windows, mtime 1652173749): 137 archivos, no imposibilidades.
+# C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\ (llave C:/Program Files/Intel/Intel(R) Management Engine Components/iCLS/, mtime 1540032173): 11 archivos, no imposibilidades.
+# C:\Users\xelab\AppData\Local\Programs\MiKTeX\miktex\bin\x64\ (llave C:/Users/xelab/AppData/Local/Programs/MiKTeX/miktex/bin/x64/, mtime 1605611421): 668 archivos, no imposibilidades.
+# C:\Users\xelab\AppData\Local\Microsoft\WindowsApps (llave C:/Users/xelab/AppData/Local/Microsoft/WindowsApps, mtime 1651150267): 13 archivos, no imposibilidades.
+# C:\Program Files\Git\cmd (llave C:/Program Files/Git/cmd, mtime 1637084157): 8 archivos, no imposibilidades.
+# C:\windows\system32 (llave C:/windows/system32, mtime 1652099257): 3042 archivos, no imposibilidades.
+# C:\Program Files (x86)\VMware\VMware Player\bin\ (llave C:/Program Files (x86)/VMware/VMware Player/bin/, mtime 1618916546): 4 archivos, no imposibilidades.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT (llave C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT, mtime 1540032169): 6 archivos, no imposibilidades.
+# C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR (llave C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR, mtime 1595693261): 5 archivos, no imposibilidades.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (llave C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1540032169): 10 archivos, no imposibilidades.
+# C:\Program Files (x86)\GnuWin32\bin (llave C:/Program Files (x86)/GnuWin32/bin, mtime 1652269556): 5 archivos, no imposibilidades.
+
+# 4186 archivos, no imposibilidades en 26 directorios.
+
+# Reglas impl�citas.
+
+obj/%.o: ./src/%.c
+#  comandos para ejecutar (de `makefile', linea  
+30):
+	mkdir -p $(OBJ_DIR)
+	gcc -c -MD $(CFLAGS) $< -o $@
+	
+
+# 1 reglas impl�citas, 0 (0,0%) terminal.
+
+# Archivos
+
+# No es un objetivo:
+all:
+#  Objetivo de l�nea de instrucciones.
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  El archivo no existe.
+#  El archivo ha sido actualizado.
+# estad�sticas del conjunto de variables de la tabla de hash:
+# Carga=0/32=0%, Rehash=0, Colisiones=0/0=0%
+
+.PHONY: clean
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+# No es un objetivo:
+.DEFAULT:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+orientexpress: src/myshell0.c obj/talk.o obj/history.o obj/help.o obj/lookAround.o obj/pwd.o obj/wheretogo.o executables/talk executables/history executables/help executables/lookAround executables/pwd executables/wheretogo
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 23):
+	gcc $(CFLAGS) $(MAIN) -o $(TARGET)
+	
+
+# No es un objetivo:
+obj/lookAround.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+# No es un objetivo:
+makefile:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  �ltima modificaci�n 2022-05-11 13:43:02
+#  El archivo ha sido actualizado.
+#  Actualizado con �xito.
+# estad�sticas del conjunto de variables de la tabla de hash:
+# Carga=0/32=0%, Rehash=0, Colisiones=0/0=0%
+
+# No es un objetivo:
+src/myshell0.c:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+executables/lookAround: obj/lookAround.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `lookAround'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+executables/history: obj/history.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `history'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+# No es un objetivo:
+obj/pwd.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+executables/pwd: obj/pwd.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `pwd'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+# No es un objetivo:
+obj/talk.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+# No es un objetivo:
+.SUFFIXES:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+executables/talk: obj/talk.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `talk'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+# No es un objetivo:
+obj/help.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+clean:
+#  objetivo falso (dependencia de .PHONY).
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  El archivo no existe.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 38):
+	rm -f "./gameTree/history.txt"
+	rm -f orientexpress
+	rm -r -f $(OBJ_DIR)
+	rm -r -f $(BIN_DIR)
+	
+
+executables/help: obj/help.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `help'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+# No es un objetivo:
+obj/wheretogo.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+# No es un objetivo:
+obj/history.o:
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+
+executables/wheretogo: obj/wheretogo.o
+#  La b�squeda de reglas impl�citas ha sido efectuada.
+#  rama del patr�n impl�cita/est�tica: `wheretogo'
+#  La fecha de modificaci�n no se comprob�.
+#  El archivo ha sido actualizado.
+#  comandos para ejecutar (de `makefile', linea 26):
+	mkdir -p $(BIN_DIR)
+	gcc -O2 $(CFLAGS)  -o $@ $<
+	
+
+# estad�sticas de la tabla de hash de los archivos:
+# Carga=20/1024=2%, Rehash=0, Colisiones=3/51=6%
+# Rutas de b�squeda VPATH
+
+# No hay rutas de b�squeda `vpath'.
+
+# No hay ruta de b�squeda general (variable `VPATH').
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Se termina la base de datos de Make en Wed May 11 13:50:31 2022
+
+ 
+make.exe: *** No hay ninguna regla para construir el objetivo `all'.  Alto.
+
