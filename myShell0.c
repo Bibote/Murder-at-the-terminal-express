@@ -105,7 +105,9 @@ int main ()
    
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
-   chdir("train_station");   
+   chdir("train_station");
+   printf(getcwd(cwd,sizeof(cwd)));
+      
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {

@@ -30,11 +30,10 @@ int main(int argc, char* argv[])
     int fd;
     char name[80];
     strcpy(name, argv[1]);
-    strcat(name, ".txt");
 
     struct stat sfile;
     stat(name, &sfile);
-    printf("st_mode = %o",sfile.st_size);
+    printf("Last access = %o",sfile.st_atime);
     fd = open(name,O_RDONLY);
     if (fd == -1) {
         printf("There is no one with that name in the room with you");
