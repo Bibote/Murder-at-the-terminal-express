@@ -7,13 +7,8 @@
 #include <string.h>
 #include <errno.h>
 #include<sys/wait.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <string.h>
-#include <errno.h>
-#include <fcntl.h>
 #include"go.c"
-#include"init.c"
+
 
 #define error(a) {perror(a); exit(1);};
 #define MAXLINE 200
@@ -72,7 +67,7 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
 
 
 
-int execute(int argc, char *argv[],int record, char *argv[])
+int execute(int argc, char *argv[])
 {
    pid_t pid;
    int i;
@@ -82,35 +77,26 @@ int execute(int argc, char *argv[],int record, char *argv[])
    strcpy(ruta, route);
    strcat(ruta, "/");
    strcat(ruta, function);
-   pid=fork();
-   if (pid==0) {
-      if (record==1){
-         
-      }else{
+    pid=fork();
+    if (pid==0) {
          i=execv(ruta,argv);
-      }
-      
-      if(i=-1) {
-         printf("That command doesn't exist");
-      }
-      printf("\n");
-      exit(pid);
-   }else {
-      wait(NULL);
-   }
+       if(i=-1) {
+            printf("That command doesn't exist");
+         }
+       printf("\n");
+       exit(pid);
+    }
+    else {
+        wait(NULL);
+     }
+   
+   
+   
 }
 
 
 int main ()
 {
-   char HISTPATH [456];
-   char EXECPATH [456];
-   char PREV_PATH[456]; 
-   getcwd(HISTPATH,sizeof(HISTPATH));
-   strcat(HISTPATH, "/History");
-   getcwd(EXECPATH,sizeof(EXECPATH));
-   strcat(EXECPATH, "/Executables");
-   //We should make a short story introduction
    char * Prompt = "myShell0> ";
    int eof= 0;
    int argc;
@@ -119,8 +105,7 @@ int main ()
    
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
-   init();
-   
+   chdir("train_station");   
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
@@ -130,33 +115,11 @@ int main ()
             //const char*newPrompt=args[1];
             char newPrompt[30]="";
             Prompt= strcat(newPrompt,args[1]);
-            strcat(Prompt, "> ");
+            strcat(Prompt, ">> ");
          // store the last directory 
             }
          }
    else{
-         if((!strcomp(args[0],"history"))&&argc>1){
-            getcwd(PREV_PATH,sizeof(PREV_PATH)); 
-            chdir(HISTPATH); 
-
-            char path[300]; 
-            getcwd(path,300); 
-            strcat(path,"/history.txt"); 
-
-            int fd = open(path,O_RDWR|O_APPEND|O_CREAT, 0644); 
-            if(fd>0){ 
-               char *command[50]; 
-               //command = (char)malloc(sizeof(argv)*sizeof(char));
-
-               for(int i=0; i<argc;i++){ //puts the arguments written on the terminal into an array (command)
-                  strcat(command,argv[i]); 
-                  strcat(command," "); 
-               }  
-               write(fd,command,strlen(command)); //writes the command on the history
-               write(fd,"\n",sizeof("\n")); 
-               close(fd); 
-            }
-         }
          execute(argc, args);
          
    } 
@@ -164,4 +127,3 @@ int main ()
       if (eof) exit(0);
    }
 }
-

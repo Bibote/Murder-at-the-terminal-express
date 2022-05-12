@@ -10,11 +10,18 @@
 
 int main(int argc, char const *argv[])
 {
-    
+    printf("\n_________ _____________ ___________ __________ _____________ ___________ ______________ ___________\n");
+    printf("[luggage]-[lounge Room]-[staffroom]-[bathroom]-[crime scene]-[Cafeteria]-[smoking area]-[locomotive))\n");
+    printf("°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°° °°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°° °°°°°°°°°°°°°° °°°°°°°°°°°\n");
+    //get name of the current directory
+    char s0[MAX_PATH];
+    getcwd(s0,MAX_PATH);
+    char *n = strrchr(s0, '/');
+    printf("you are in: %s\n",n);
     // get grandparent directory
+    printf("\nyou can go to:\n\n");
     char s1[MAX_PATH];
     getcwd(s1,MAX_PATH);
-    
     char s2[MAX_PATH];
     getcwd(s2,MAX_PATH);
     char *p = strrchr(s2, '/');
@@ -30,6 +37,7 @@ int main(int argc, char const *argv[])
         printf("Could not open current directory\n");
         return -1;
     }
+    
     while ((ent = readdir(dir)) != NULL) {
         
         if (strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0) {

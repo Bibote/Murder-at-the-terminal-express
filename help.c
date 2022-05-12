@@ -2,11 +2,14 @@
 #include <stdio.h>
 #include <limits.h>
 void main(void){
-    printf("A list of the usable commands:\n");
-    printf("ls: Used to lookaround objects\n");
-    printf("pwd: Shows working directory\n");
-    printf("talk: Allows to talk with the different people\n");
-    printf("go: Used to move to next directory\n");
-    printf("wheretogo: Shows which directories you can move to\n");
+    printf("What you can do \n");
+    printf("lookaround: to see if there is something to interact with \n");
+    printf("wheretogo: if you are lost or search for new places\n");
+    printf("talk: Allows to talk with  people\n");
+    printf("go: Use it to move from a place to an other\n");
+    printf("help: to see this message again\n");
+    printf("press enter to continue you investigation\n");
+    getchar();
+    system("clear");
     }
     

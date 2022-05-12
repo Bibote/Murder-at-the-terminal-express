@@ -38,7 +38,11 @@ ROOMS:
         
     
     bathroom
-                luggage lounge Room  staffroom bathroom (read files)   cd.. <- crime scene  -> cd   Cafeteria   smoking area  head of the train
+
+        ___________ _______________ _____________ ____________ _______________ _____________ ________________ ___________________
+        ||luggage||-||lounge Room||-||staffroom||-||bathroom||-||crime scene||-||Cafeteria||-||smoking area||-||head of the train)))
+        °°°°°°°°°°° °°°°°°°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°°°°°°° °°°°°°°°°°°°°°°°°°°°   
+    
     |||_____---
     link/unlink: interrogation different room 
     stat: the person with anxiety

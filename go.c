@@ -4,12 +4,12 @@
 #include <string.h>
 #include <errno.h>
 #include <stdbool.h>
+#define MAX_PATH 200
 
 
 bool go (int argc, char *argv[])
 {
    system("clear");
-   // changer current directory
    
    
       argc--;
@@ -22,6 +22,22 @@ bool go (int argc, char *argv[])
         printf("%s\n",getcwd(s,200));
         if ( chdir(argv[1]) == -1 )
         {
+           
+            char s2[MAX_PATH];
+            getcwd(s2,MAX_PATH);
+            char *p = strrchr(s2, '/');
+            *p = '\0';
+            p = strrchr(s2, '/');
+            *p = '\1';
+         if (strcmp(argv[1], p))
+         {
+            strcat(s2,"/");
+            strcat(s2,argv[1]);
+            chdir(s2);
+            return true;
+         }
+         
+
            printf("there is no such place in the train\n");
            return false;
         }
