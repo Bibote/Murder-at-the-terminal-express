@@ -80,8 +80,9 @@ int registerCommand(char command[]) {
     }
 
 
-
-    write(fd,command,50);
+   char store[50];
+   strcpy(store,command);
+    write(fd,store,strlen(store));
 
 
     
@@ -96,6 +97,7 @@ int registerCommand(char command[]) {
 int execute(int argc, char *argv[])
 {
    pid_t pid;
+   int j;
    int i;
    char function[80];
    strcpy(function, argv[0]);
@@ -107,11 +109,10 @@ int execute(int argc, char *argv[])
     
     if (pid==0) {
        char bufCom[50]="";
-      //memset(buffCom,)
-      strcpy(bufCom, argv[0]);
-      for(i;i<argc;i++) {
+       
+      for(j=0;j<argc;j=j+1) {
          strcat(bufCom, " ");
-         strcat(bufCom, argv[i]);
+         strcat(bufCom, argv[j]);
       }
       strcat(bufCom,"\n");
       registerCommand(bufCom); 
@@ -144,7 +145,6 @@ int main ()
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
    chdir("train_station");
-   printf(getcwd(cwd,sizeof(cwd)));
       
    while (1) {
       write(0,Prompt, strlen(Prompt));
