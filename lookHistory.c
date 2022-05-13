@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     }
     char cwd[MAX_PATH];
     char route[80];
-    strcpy(route, getcwd(cwd,sizeof(cwd)));
+    strcpy(route, "/users/alumnos/acaf/acaf0237/Pruebas/Murder-at-the-terminal-express");
 
    strcat(route, "/history.txt");
 

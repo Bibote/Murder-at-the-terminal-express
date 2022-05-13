@@ -18,7 +18,6 @@
 #define ROUTE 
 
 char route[80];
-
 int read_args(int* argcp, char* args[], int max, int* eofp)
 {
    static char cmd[MAXLINE];
@@ -70,11 +69,10 @@ int registerCommand(char command[]) {
    int fd;
 
 
-
     char fileroute[80];
     strcpy(fileroute, route);
     strcat(fileroute, "/history.txt");
-    fd = open(fileroute,O_WRONLY);
+    fd = open(fileroute,O_WRONLY | O_APPEND);
     if (fd == -1) {
         printf("There has been an error with the history");
         printf("\n");
@@ -82,7 +80,7 @@ int registerCommand(char command[]) {
     }
 
 
-    write(fd,"\n",1);
+
     write(fd,command,50);
 
 
@@ -106,29 +104,30 @@ int execute(int argc, char *argv[])
    strcat(ruta, "/");
    strcat(ruta, function);
     pid=fork();
+    
     if (pid==0) {
-         i=execv(ruta,argv);
-       if(i=-1) {
-            printf("That command doesn't exist");
-         }
-      int i=1;
-      char bufCom[50];
+       char bufCom[50]="";
+      //memset(buffCom,)
       strcpy(bufCom, argv[0]);
       for(i;i<argc;i++) {
          strcat(bufCom, " ");
          strcat(bufCom, argv[i]);
       }
-      
-
-
-       registerCommand(bufCom);    
-       printf("\n");
+      strcat(bufCom,"\n");
+      registerCommand(bufCom); 
+         i=execv(ruta,argv);
+       if(i=-1) {
+            printf("That command doesn't exist");
+         }
+      int i=1;
+      printf("\n");
        exit(pid);
+      
     }
     else {
         wait(NULL);
      }
-   
+      
    
    
 }
