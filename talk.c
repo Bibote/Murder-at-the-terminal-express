@@ -12,10 +12,12 @@ int main(int argc, char* argv[])
     //First we will search to see if the user is calling for help in the function, and show in the console how to use the function.
     if(argc==2){
         if(!strcmp(argv[1], "help")) {
+        printf("\033[0;32m");
         printf("To talk with someone you will need to write their name, and what do you want to talk a about(physical/moral/identity/accusation), you need to be in the same room of the person you want to talk with.");
         printf("\n");
         printf("Remember that names start with Capital letters!!");
         printf("\n");
+        printf("\033[0m");
         return 1;
         }
         else{
@@ -26,7 +28,9 @@ int main(int argc, char* argv[])
 
     //If the user is not calling for the help function we will check that the function is called with the right ammount of parameters
     if(argc!=3){
+        printf("\033[0;31m");
         printf("Wrong ammount of parameters");
+        printf("\033[0m");
         return 0;
     }
     //We declare 2 variables one for the offset and another one for the file descriptor.
@@ -38,7 +42,9 @@ int main(int argc, char* argv[])
 
     //If the file descriptor is -1 is because the name is not in the room with the person.
     if (fd == -1) {
+        printf("\033[0;31m");
         printf("There is no one with that name in the room with you");
+        printf("\033[0m");
         printf("\n");
         return 1;
     }
@@ -59,7 +65,9 @@ int main(int argc, char* argv[])
 
     //If the user didn't write an option of the available ones it will informe him.
     else {
+        printf("\033[0;31m");
         printf("He/She doesn`t want to talk about that");
+        printf("\033[0m");
         printf("\n");
         return 0;
     }
@@ -75,8 +83,9 @@ int main(int argc, char* argv[])
        if (buff[i]=='.') break;  // correct line
        i++;
     }
+  
     printf("%s\n",buff);
-
+    
     //Close everything and leave.
     close(fd);
     return(1);
