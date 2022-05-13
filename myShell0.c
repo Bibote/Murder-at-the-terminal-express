@@ -8,6 +8,7 @@
 #include <errno.h>
 #include<sys/wait.h>
 #include"go.c"
+#include <fcntl.h>
 
 
 #define error(a) {perror(a); exit(1);};
@@ -65,6 +66,33 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
    return 1;
 }
 
+int registerCommand(char command[]) {
+   int fd;
+
+
+
+    char fileroute[80];
+    strcpy(fileroute, route);
+    strcat(fileroute, "/history.txt");
+    fd = open(fileroute,O_WRONLY);
+    if (fd == -1) {
+        printf("There has been an error with the history");
+        printf("\n");
+        return 1;
+    }
+
+
+    write(fd,"\n",1);
+    write(fd,command,50);
+
+
+    
+
+    
+    close(fd);
+    printf("\n");
+    return(1);
+}
 
 
 int execute(int argc, char *argv[])
@@ -83,6 +111,17 @@ int execute(int argc, char *argv[])
        if(i=-1) {
             printf("That command doesn't exist");
          }
+      int i=1;
+      char bufCom[50];
+      strcpy(bufCom, argv[0]);
+      for(i;i<argc;i++) {
+         strcat(bufCom, " ");
+         strcat(bufCom, argv[i]);
+      }
+      
+
+
+       registerCommand(bufCom);    
        printf("\n");
        exit(pid);
     }
