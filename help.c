@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
-void main(int argc, char* argv[]){
+int main(int argc, char* argv[]){
 
 
     if(argc!=1){
