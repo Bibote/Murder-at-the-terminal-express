@@ -8,9 +8,16 @@
 #define MAX_PATH 200
 int main(int argc, char* argv[])
 {
-    if(argc!=1){
+    if (argv[1]=="help"){
+        printf(\033[0;32m);
+        printf("This command only needs one argument to be used: lookHistory. It shows all the commands tha player has written on the terminal, even if they are not real commands.");
+        printf(\033[0m);
+    }
+    if(argc!=2){
+        printf(\033[0;3m);
         printf("Wrong ammount of parameters");
         printf("\n");
+        printf(\033[0m);
         return 0;
     }
     char cwd[MAX_PATH];
@@ -25,15 +32,19 @@ int main(int argc, char* argv[])
     stat(route, &sfile);
     fd = open(route,O_RDONLY);
     if (fd == -1) {
+        printf(\033[0;3m);
         printf("There has been an error with the history");
         printf("\n");
+        printf(\033[0m);
         return 1;
     }
     int i=sfile.st_size;
     static char buff[100];
 
     if(read(fd,buff,i)==-1) {
+        printf(\033[0;3m);
         printf("error");
+        printf(\033[0m);
     }
     else {
         printf(buff);
