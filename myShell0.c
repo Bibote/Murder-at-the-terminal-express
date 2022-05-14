@@ -160,6 +160,10 @@ int main ()
    int argc;
    char *args[MAXARGS];
    char cwd[MAX_PATH];
+   // clear history.txt file
+   FILE *fp;
+   fp = fopen("history.txt", "w");
+   fclose(fp);
    
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
