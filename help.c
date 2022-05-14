@@ -8,7 +8,7 @@ void main(void){
     printf("talk: Allows to talk with  people\n");
     printf("go: Use it to move from a place to an other\n");
     printf("lookHistory: Prints a list of the used commands \n");
-    printf("interact: Use to interacts with the different objects around the room\n");
+    printf("interact: Use to interacts with the different objects and people around the room\n");
     printf("help: to see this message again\n\n");
     printf("You can also type a specific command followed by help, and it will show a brief explanation of how to use each command (Example: talk help)\n");
     printf("press enter to continue you investigation\n");
