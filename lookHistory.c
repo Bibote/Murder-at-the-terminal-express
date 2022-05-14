@@ -13,11 +13,30 @@ int main(int argc, char* argv[])
         printf("\n");
         return 0;
     }
+    char*p;
     char cwd[MAX_PATH];
     char route[80];
-    strcpy(route, "/users/alumnos/acaf/acaf0237/Pruebas/Murder-at-the-terminal-express");
+    getcwd(cwd,MAX_PATH);
+    p = strrchr(cwd, '/');
+    while (strcmp(p,"/Murder-at-the-terminal-express")!=0)
+    {
+        *p = '\0';
+        p = strrchr(cwd, '/');
+        //printf("cwd=%s\n",cwd);
+        //printf("p=%s\n",p);
+    }
+    printf("sortie\n");
 
-   strcat(route, "/history.txt");
+    if (strcmp(p,"/Murder-at-the-terminal-express")==0)
+    {
+        strcpy(route,cwd);
+        strcat(route, "/history.txt");
+    } 
+    
+    
+    
+
+   //strcat(route, "/history.txt");
 
     int fd;
 
@@ -36,7 +55,7 @@ int main(int argc, char* argv[])
         printf("error");
     }
     else {
-        printf(buff);
+        printf("%s",buff);
     }
 
     
@@ -47,3 +66,6 @@ int main(int argc, char* argv[])
     return(1);
 
 }
+
+//chdir("..");
+    //strcpy(route, "/home/ahmed/Bureau/imane/Murder-at-the-terminal-express");
