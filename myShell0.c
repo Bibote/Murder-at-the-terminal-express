@@ -9,6 +9,7 @@
 #include<sys/wait.h>
 #include"go.c"
 #include <fcntl.h>
+#include<signal.h>
 
 
 #define error(a) {perror(a); exit(1);};
@@ -92,7 +93,25 @@ int registerCommand(char command[]) {
     printf("\n");
     return(1);
 }
-
+void sig_handler(int signum){
+  printf("\033[0;36m");
+  printf("\nTime is up, the train has reached its station, its time to decide who you think the assasin is:\n");
+  char name[20];
+  printf("\033[0m");
+  scanf("%s", &name);
+  if(!strcmp(name, "Edurne") || !strcmp(name, "edurne") ) {
+      printf("\033[0;32m");
+      printf("Congratulations detective, you managed to catch the assasin\n");
+      printf("\033[0m");
+  }
+  else {
+   printf("\033[0;31m");
+  printf("You were wrong, and left the assain free\n");
+  printf("\033[0m");
+  }
+  
+  exit(0);
+}
 
 int execute(int argc, char *argv[])
 {
@@ -145,7 +164,9 @@ int main ()
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
    chdir("train_station");
-      
+   signal(SIGALRM,sig_handler); // Register signal handler
+ 
+  alarm(600);  // Scheduled alarm for 10 minutes 
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
