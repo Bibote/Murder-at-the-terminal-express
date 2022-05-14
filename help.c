@@ -1,7 +1,16 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
-void main(void){
+void main(int argc, char* argv[]){
+
+
+    if(argc!=1){
+    printf("\033[0;31m");
+    printf("Wrong ammount of parameters\n");
+    printf("\033[0m");
+    return 0;
+    }
+
     printf("Available commands:\n\n");
     printf("lookaround: To see if there is something to interact with \n");
     printf("wheretogo: if you are lost or search for new places\n");
@@ -14,5 +23,6 @@ void main(void){
     printf("press enter to continue you investigation\n");
     getchar();
     system("clear");
+    return (1);
     }
     
