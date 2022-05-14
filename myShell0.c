@@ -166,7 +166,7 @@ int main ()
    chdir("train_station");
    signal(SIGALRM,sig_handler); // Register signal handler
  
-  alarm(5);  // Scheduled alarm for 5 minutes 
+  alarm(600);  // Scheduled alarm for 10 minutes 
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
