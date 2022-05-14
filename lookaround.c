@@ -13,9 +13,8 @@ int main(int argc, char const *argv[])
 {
     if(argc==2){
         if(!strcmp(argv[1], "help")) {
-    
         printf("\033[0;32m");
-        printf("This command only needs one argument to be used: lookaround. It shows all the objects and people on the room you are in.");
+        printf("This command only needs one argument to be used: lookaround. It shows all the objects and people on the room you are in.\n");
         printf("\033[0m");
     }
     }
