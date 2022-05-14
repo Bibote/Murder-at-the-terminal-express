@@ -15,6 +15,26 @@
 
 
 int main(int argc, char *argv[]){
+    if (argc == 2)
+    {
+        if (!strcmp(argv[1], "help"))
+        {
+            printf("\n\nbefore interrogating a supect you need to be alone in the room so you can't be interrupted by other people\n and take the maximum information from each supect the interrogation room willl be the staffroom ");
+            printf("\n\n");
+            printf("Remember that names start with Capital letters and that this is a train you need to pass by each room in your path ");
+            printf("\n\n");
+            printf("commande syntaxe :  isolate suspectName Room\n");
+            printf("\npress a key to continue investigation");
+            getchar();
+            system("clear");
+            return 1;
+        }
+        else
+        {
+            printf("Wrong ammount of parameters");
+            return 0;
+        }
+    }
     if(argc!=3 && argc !=4){
         printf("Enter a valid Command with Proper Arguments!\n");
         exit(EXIT_FAILURE);

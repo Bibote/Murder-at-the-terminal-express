@@ -10,6 +10,26 @@
 
 int main(int argc, char const *argv[])
 {
+    if (argc == 2)
+    {
+            if (strcmp(argv[1],"help")==0)
+        {
+            printf("this command is used without arguments\n");
+            printf("it will show:\n\tthe current room\n\trooms directly accecible from the current room\n\ta simple map of the train");
+            printf("\n\n");
+            printf("press a key to continue");
+            getchar();
+            system("clear");
+            return 1;
+        }
+        else
+        {
+            printf("Wrong ammount of parameters");
+            return 0;
+        }
+    }
+    
+    
     printf("\n_________ _____________ ___________ __________ _____________ ___________ ______________ ___________\n");
     printf("[luggage]-[lounge Room]-[staffroom]-[bathroom]-[crime scene]-[Cafeteria]-[smoking area]-[locomotive))\n");
     printf("°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°° °°°°°°°°°° °°°°°°°°°°°°° °°°°°°°°°°° °°°°°°°°°°°°°° °°°°°°°°°°°\n");

@@ -6,58 +6,61 @@
 #include <stdbool.h>
 #define MAX_PATH 200
 
-
-bool go (int argc, char *argv[])
+int go(int argc, char *argv[])
 {
-   system("clear");
-   
-   
-      argc--;
+    system("clear");
+    char s[200];
+    printf("%s\n", getcwd(s, 200));
 
+    if (argc != 2)
+    {
+        printf("invalid number of arguments\n");
+        return 0;
+    }
+    if (!strcmp(argv[1], "help"))
+    {
+        printf("\n use 'go' to move from one room to another. Remember this is a train you have to pass by each room in your path\n");
+        printf("\n\n go command syntaxe :  go 'Room'\n");
+        printf("\n\nPress a key to continue investigation");
+        getchar();
+        system("clear");
+        return 1;
+    }
+    else if (chdir(argv[1]) == -1)
+    {
 
-      if (argc == 1)
-      {
-          
-        char s[200];
-        printf("%s\n",getcwd(s,200));
-        if ( chdir(argv[1]) == -1 )
-        {
-           
-            char s2[MAX_PATH];
+        char s2[MAX_PATH];
             getcwd(s2,MAX_PATH);
             char *p = strrchr(s2, '/');
+            printf("s2=%s\n",s2);
+            printf("%s\n",p);
             *p = '\0';
+            printf("40%s\n",p);
+            int l=strlen(p);
+            printf("%d\n",l);
             p = strrchr(s2, '/');
-            *p = '\1';
-         if (strcmp(argv[1], p))
+            char m[MAX_PATH];
+            strcpy(m, s2);
+            char n[MAX_PATH];
+            strcpy(n, argv[1]);
+            p=p+1;
+         if (strcmp(argv[1], p)==0)
          {
-            strcat(s2,"/");
-            strcat(s2,argv[1]);
-            chdir(s2);
-            return true;
+            chdir(m);
+            printf("%s\n", getcwd(s, 200));
+            return 1;
+         }
+         else
+         {
+            printf("you can't go to this room\n");
+            return 0;
          }
          
-
-           printf("there is no such place in the train\n");
-           return false;
-        }
         
-        
-        printf("%s\n",getcwd(s,200));
-        return true;
-        
-      }
-      else if (argc == 2)
-      {
-         if (chdir(argv[1]) == -1)
-         {
-            fprintf(stderr, "Error: %s\n", strerror(errno));
-            return false;
-         }
-      }
-      else
-      {
-         fprintf(stderr, "Error: Too many arguments\n");
-         return false;
-      }
+    }
+    else if (chdir(argv[1]))
+    {
+        printf("%s\n", getcwd(s, 200));
+        return 1;
+    }
 }

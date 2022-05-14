@@ -136,7 +136,7 @@ int execute(int argc, char *argv[])
 
 int main ()
 {
-   char * Prompt = "myShell0> ";
+   char * Prompt = "train_station> ";
    int eof= 0;
    int argc;
    char *args[MAXARGS];
@@ -151,12 +151,11 @@ int main ()
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
          if (!strcmp(args[0],"go"))
          {
-            if(go(argc,args)){
-            //const char*newPrompt=args[1];
+            if(go(argc,args)==1 && strcmp(args[1],"help")){
+            
             char newPrompt[30]="";
             Prompt= strcat(newPrompt,args[1]);
             strcat(Prompt, ">> ");
-         // store the last directory 
             }
          }
    else{
