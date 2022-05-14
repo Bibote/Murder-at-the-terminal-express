@@ -6,14 +6,18 @@
 #include <errno.h>
 #include<sys/wait.h>
 #include <dirent.h>
+#include <fcntl.h>
 #define MAX_PATH 200
 
 int main(int argc, char const *argv[])
 {
-    if(argv[1]=="help"){
-        printf(\033[0;32m);
-        printf("This command only needs one argument to be used: lookaround. It shows all the objects and peopel on the room you are in.");
-        printf(\033[0m);
+    if(argc==2){
+        if(!strcmp(argv[1], "help")) {
+    
+        printf("\033[0;32m");
+        printf("This command only needs one argument to be used: lookaround. It shows all the objects and people on the room you are in.");
+        printf("\033[0m");
+    }
     }
     // get grandparent directory
     char s1[MAX_PATH];
@@ -23,9 +27,9 @@ int main(int argc, char const *argv[])
     struct dirent *ent;
     dir = opendir(s1);
     if (dir == NULL) {
-        printf(\033[0;3m);
+        printf("\033[0;3m");
         printf("Could not open current directory\n");
-        printf(\033[0m);
+        printf("\033[0m");
         return -1;
     }
     while ((ent = readdir(dir)) != NULL) {
