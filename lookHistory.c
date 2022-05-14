@@ -14,14 +14,18 @@ int main(int argc, char* argv[])
         printf("\033[0;32m");
         printf("This command only needs one argument to be used: lookHistory. It shows all the commands tha player has written on the terminal, even if they are not real commands.");
         printf("\033[0m");
-         return 1;
-         }else{
-            printf("Wrong ammount of parametersss");
+        return 1;
+        }
+        else{
+            printf("\033[0;31m");
+            printf("Wrong ammount of parameters\n");
+            printf("\033[0m");
             return 0;
         }
     }
+
     if(argc!=1){
-        printf("\033[0;3m");
+        printf("\033[0;31m");
         printf("Wrong ammount of parameters");
         printf("\n");
         printf("\033[0m");
@@ -59,7 +63,7 @@ int main(int argc, char* argv[])
     stat(route, &sfile);
     fd = open(route,O_RDONLY);
     if (fd == -1) {
-        printf("\033[0;3m");
+        printf("\033[0;31m");
         printf("There has been an error with the history");
         printf("\n");
         printf("\033[0m");
@@ -69,7 +73,7 @@ int main(int argc, char* argv[])
     static char buff[100];
 
     if(read(fd,buff,i)==-1) {
-        printf("\033[0;3m");
+        printf("\033[0;31m");
         printf("error");
         printf("\033[0m");
     }
