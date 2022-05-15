@@ -155,7 +155,7 @@ int execute(int argc, char *argv[])
 
 int main ()
 {
-   char * Prompt = "train_station> ";
+   char * Prompt = "your_room> ";
    int eof= 0;
    int argc;
    char *args[MAXARGS];
@@ -167,7 +167,7 @@ int main ()
    
    
    strcpy(route, getcwd(cwd,sizeof(cwd)));
-   chdir("train_station");
+   chdir("your_room");
    signal(SIGALRM,sig_handler); // Register signal handler
  
   alarm(600);  // Scheduled alarm for 10 minutes 

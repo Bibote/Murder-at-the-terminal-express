@@ -44,7 +44,6 @@ int main(int argc, char* argv[])
         //printf("cwd=%s\n",cwd);
         //printf("p=%s\n",p);
     }
-    printf("sortie\n");
 
     if (strcmp(p,"/Murder-at-the-terminal-express")==0)
     {

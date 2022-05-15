@@ -5,6 +5,7 @@
 #include <errno.h>
 #include <fcntl.h>
 
+#define MAX_PATH 200
 
 int main(int argc, char* argv[])
 {
@@ -21,7 +22,9 @@ int main(int argc, char* argv[])
         return 1;
         }
         else{
-            printf("Wrong ammount of parameters");
+            printf("\033[0;31m")
+            printf("Wrong ammount of parameters\n");
+            printf("\033[0m");
             return 0;
         }
     }
@@ -29,7 +32,24 @@ int main(int argc, char* argv[])
     //If the user is not calling for the help function we will check that the function is called with the right ammount of parameters
     if(argc!=3){
         printf("\033[0;31m");
-        printf("Wrong ammount of parameters");
+        printf("Wrong ammount of parameters\n");
+        printf("\033[0m");
+        return 0;
+    }
+    char cwd[MAX_PATH];
+    char folder[10];
+    getcwd(cwd, sizeof(cwd));
+    int i=0;
+    int j=0;
+    for(i;i<strlen(cwd);i++) {
+        if(cwd[i]=='/') {
+            j=i;
+        }
+    }
+    memcpy(folder,&cwd[j+1],strlen(cwd)-j);
+    if(strcmp(folder, "interrogation_room")) {
+        printf("\033[0;31m");
+        printf("People will only talk with you in the interrogation_room\n");
         printf("\033[0m");
         return 0;
     }
@@ -77,15 +97,15 @@ int main(int argc, char* argv[])
     
     //We will read the file character by character until a . is found.
     static char buff[500];
-    int i=0;
+    i=0;
     while (read(fd,buff+i,1) == 1) {
         
        if (buff[i]=='.') break;  // correct line
        i++;
     }
-  
+    printf("\033[0;36m");
     printf("%s\n",buff);
-    
+    printf("\033[0m");
     //Close everything and leave.
     close(fd);
     return(1);
