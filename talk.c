@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
         return 1;
         }
         else{
-            printf("\033[0;31m")
+            printf("\033[0;31m");
             printf("Wrong ammount of parameters\n");
             printf("\033[0m");
             return 0;
@@ -56,9 +56,11 @@ int main(int argc, char* argv[])
     //We declare 2 variables one for the offset and another one for the file descriptor.
     int offset;
     int fd;
-
+    char name[20];
+    strcpy(name,argv[1]);
+    strcat(name,".txt");
     //We use the open system call for the person we want to talk with in read mode.
-    fd = open(argv[1],O_RDONLY);
+    fd = open(name,O_RDONLY);
 
     //If the file descriptor is -1 is because the name is not in the room with the person.
     if (fd == -1) {
