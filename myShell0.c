@@ -164,8 +164,9 @@ int main ()
    FILE *fp;
    fp = fopen("history.txt", "w");
    fclose(fp);
-   
-   
+   //lock the crime scene  i will adapt it when the directory tree is final
+   //chmod("crimescene",444);
+
    strcpy(route, getcwd(cwd,sizeof(cwd)));
    chdir("your_room");
    signal(SIGALRM,sig_handler); // Register signal handler
