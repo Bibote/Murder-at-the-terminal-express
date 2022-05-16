@@ -106,7 +106,7 @@ void sig_handler(int signum){
   }
   else {
    printf("\033[0;31m");
-  printf("You were wrong, and left the assain free\n");
+  printf("You were wrong, and left the assasin free\n");
   printf("\033[0m");
   }
   

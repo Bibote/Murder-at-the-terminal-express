@@ -18,25 +18,29 @@ int main(int argc, char *argv[]){
     if (argc == 2)
     {
         if (!strcmp(argv[1], "help"))
-        {
-            printf("\n\nbefore interrogating a supect you need to be alone in the room so you can't be interrupted by other people\n and take the maximum information from each supect the interrogation room willl be the staffroom ");
+        {   printf("\033[0;32m");
+            printf("\n\nBefore interrogating a suspect you need to be alone in the room so you can't be interrupted by other people\n and to take the maximum information from each suspect, the interrogation room will be the staffroom ");
             printf("\n\n");
-            printf("Remember that names start with Capital letters and that this is a train you need to pass by each room in your path ");
+            printf("Remember that names start with Capital letters and that this is a train, so you need to pass by each room in your path ");
             printf("\n\n");
-            printf("commande syntaxe :  isolate suspectName Room\n");
-            printf("\npress a key to continue investigation");
+            printf("Command syntax :  isolate suspect Name Room\n");
+            printf("\nPress enter key to continue investigating");
+            printf("\033[0m");
             getchar();
             system("clear");
             return 1;
         }
         else
-        {
+        {   printf("\033[0;31m");
             printf("Wrong ammount of parameters");
+            printf("\033[0m");
             return 0;
         }
     }
     if(argc!=3 && argc !=4){
+        printf("\033[0;31m");
         printf("Enter a valid Command with Proper Arguments!\n");
+        printf("\033[0m");
         exit(EXIT_FAILURE);
     }
 else{
@@ -50,7 +54,9 @@ else{
     long int n1;
     char buffer[4096];
     if(f1==-1){
-        printf("the suspect is not in this room\n");
+        printf("\033[0;31m");
+        printf("The suspect is not in this room\n");
+        printf("\033[0m");
         close(f1);
         exit(1);
 }
@@ -77,13 +83,15 @@ else{
             return 0;
             }
             close(f2);
-            printf("you can not move the suspect to this room\n");
+            printf("\033[0;31m");
+            printf("You can not move the suspect to this room\n");
+            printf("\033[0m");
             exit(1);
         }
         
         link(argv[1],myfile);
         unlink(argv[1]); // Deleting the src file as contents have been moved
-            printf("suspect is now in %s\n",argv[2]);
+            printf("Suspect is now in %s\n",argv[2]);
             close(f1);
             close(f2);
     }}

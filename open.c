@@ -7,7 +7,7 @@
 
 int main(int argc, char const *argv[])
 {
-    printf("entrer");
+    printf("Enter");
     
     if (argc==3) //correct command
     {
@@ -24,8 +24,10 @@ int main(int argc, char const *argv[])
         
     }
     else
-    {
-        printf("\nwrong input\n");
+    {   
+        printf("\033[0;31m");
+        printf("\nWrong input\n");
+        printf("\033[0m");
     }
 
     

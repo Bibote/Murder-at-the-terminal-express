@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     if(argc==2){
         if(!strcmp(argv[1], "help")) {
         printf("\033[0;32m");
-        printf("This command only needs one argument to be used: lookHistory. It shows all the commands tha player has written on the terminal, even if they are not real commands.\n");
+        printf("This command only needs one argument to be used: lookHistory. It shows all the commands that the player has written on the terminal, even if they are not real commands.\n");
         printf("\033[0m");
         return 1;
         }

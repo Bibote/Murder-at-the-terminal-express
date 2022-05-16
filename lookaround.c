@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
     struct dirent *ent;
     dir = opendir(s1);
     if (dir == NULL) {
-        printf("\033[0;3m");
+        printf("\033[0;31m");
         printf("Could not open current directory\n");
         printf("\033[0m");
         return -1;

@@ -13,18 +13,21 @@ int main(int argc, char const *argv[])
     if (argc == 2)
     {
             if (strcmp(argv[1],"help")==0)
-        {
-            printf("this command is used without arguments\n");
-            printf("it will show:\n\tthe current room\n\trooms directly accecible from the current room\n\ta simple map of the train");
+            
+        {   printf("\033[0;32m");
+            printf("This command is used without arguments\n");
+            printf("It will show:\n\tThe current room\n\tRooms directly accesible from the current room\n\tA simple map of the train");
             printf("\n\n");
-            printf("press a key to continue");
+            printf("Press a key to continue");
             getchar();
+            printf("\033[0m");
             system("clear");
             return 1;
         }
         else
-        {
+        {   printf("\033[0;31m");
             printf("Wrong ammount of parameters");
+            printf("\033[0m");
             return 0;
         }
     }
@@ -37,9 +40,9 @@ int main(int argc, char const *argv[])
     char s0[MAX_PATH];
     getcwd(s0,MAX_PATH);
     char *n = strrchr(s0, '/');
-    printf("you are in: %s\n",n);
+    printf("You are in: %s\n",n);
     // get grandparent directory
-    printf("\nyou can go to:\n\n");
+    printf("\nYou can go to:\n\n");
     char s1[MAX_PATH];
     getcwd(s1,MAX_PATH);
     char s2[MAX_PATH];
@@ -54,7 +57,9 @@ int main(int argc, char const *argv[])
     struct dirent *ent;
     dir = opendir(s1);
     if (dir == NULL) {
+        printf("\033[0;31m");
         printf("Could not open current directory\n");
+        printf("\033[0m");
         return -1;
     }
     
