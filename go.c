@@ -13,15 +13,17 @@ int go(int argc, char *argv[])
     printf("%s\n", getcwd(s, 200));
 
     if (argc != 2)
-    {
-        printf("invalid number of arguments\n");
+    {   printf("\033[0;31m");
+        printf("Invalid number of arguments\n");
+        printf("\033[0m");
         return 0;
     }
     if (!strcmp(argv[1], "help"))
-    {
-        printf("\n use 'go' to move from one room to another. Remember this is a train you have to pass by each room in your path\n");
-        printf("\n\n go command syntaxe :  go 'Room'\n");
+    {   printf("\033[0;32m");
+        printf("\n Use 'go' to move from one room to another. Remember this is a train you have to pass by each room in your path\n");
+        printf("\n\n Go command syntax :  go 'Room'\n");
         printf("\n\nPress a key to continue investigation");
+        printf("\033[0m");
         getchar();
         system("clear");
         return 1;
@@ -49,7 +51,7 @@ int go(int argc, char *argv[])
          }
          else
          {
-            printf("you can't go to this room\n");
+            printf("You can't go to this room\n");
             return 0;
          }
          
