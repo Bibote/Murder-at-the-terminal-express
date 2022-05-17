@@ -9,9 +9,7 @@
 
 int main(int argc, char* argv[])
 {
-    printf("%s",argv[1]);
     if(argc!=2){
-        
         printf("\033[0;31m");
         printf("Wrong ammount of parameters");
         printf("\n");
@@ -50,7 +48,6 @@ int main(int argc, char* argv[])
     printf("\033[0m");
     return 1;
     }
-    int fd;
 
     if(!strcmp(argv[1], "Wiame")) {    
     printf("\033[0;31m");
@@ -75,6 +72,8 @@ int main(int argc, char* argv[])
     printf("\033[0m");
     return 1;
     }
+
+    int fd;
     struct stat sfile;
     stat(argv[1], &sfile);
     fd = open(argv[1],O_RDONLY);
