@@ -1,4 +1,4 @@
-all: help  isolate wheretogo talk history myShell0 interact open lookaround
+all: help  isolate wheretogo talk history  interact open lookaround myShell0
 help : commands/help.c
 	gcc -o commands/help commands/help.c
 isolate : commands/isolate.c
