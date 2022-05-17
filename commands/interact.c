@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
     return 1;
     }
    
-   if(!strcmp(argv[1], "Alvaro" || "Wiame" || "Millan" || "Edurne" || "Ahmed" || "Alex" )) {
+    if(!strcmp(argv[1], "Alvaro" || "Wiame" || "Millan" || "Edurne" || "Ahmed" || "Alex" )) {
     printf("\033[0;32m");
     printf("You cant interact with people, use the talk command");
     printf("\n");
