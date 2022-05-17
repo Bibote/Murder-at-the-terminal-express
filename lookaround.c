@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
         }
     }
     memcpy(folder,&cwd[j+1],strlen(cwd)-j);
-
+    printf("\033[0;35m");
     if(!strcmp(folder,"Luggage_room")){
         printf("You are in the luggage room. Here are stored all the bags and siutcases of all the passengers in the train.");
     }else if (!strcmp(folder,"corridor")){
@@ -62,6 +62,7 @@ int main(int argc, char const *argv[])
     }else if(!strcmp(folder,"locomotive")){
         printf("You are now in the locomotive. This is the head of the train, from here all the train is controled.");
     }
+    printf("\033[0m");
     printf("\n");
     // get grandparent directory
     char s1[MAX_PATH];
