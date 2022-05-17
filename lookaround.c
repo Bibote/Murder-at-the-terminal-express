@@ -31,56 +31,38 @@ int main(int argc, char const *argv[])
     }
     memcpy(folder,&cwd[j+1],strlen(cwd)-j);
 
-    switch (folder)
-    {
-    case 'Luggage_room':
+    if(!strcmp(folder,"Luggage_room")){
         printf("You are in the luggage room. Here are stored all the bags and siutcases of all the passengers in the train.");
-        break;
-    case 'corridor':
+    }else if (!strcmp(folder,"corridor")){
         printf("You are in the bedrooms wagon.");
-        break;
-    case 'Ahmed_room':
+    }else if (!strcmp(folder,"Ahmed_room")){
         printf("You are in Ahmeds' bedroom. This is the private area of the passenger called Ahmed.");
-        break;
-    case 'Alex_room':
+    }else if(!strcmp(folder,"Alex_room")){
         printf("You are in Alexs' bedroom. This is the private area of the passenger called Alex.");
-        break;
-    case 'Alvaro_room':
-    printf("You are in Alvaros' bedroom. This is the private area of the passenger called Alvaro.");
-        break;
-    case 'Edurne_room':
+    }else if(!strcmp(folder,"Alvaro_room")){
+        printf("You are in Alvaros' bedroom. This is the private area of the passenger called Alvaro.");
+    }else if(!strcmp(folder,"Edurne_room")){
         printf("You are in Edurnes' bedroom. This is the private area of the passenger called Edurne.");
-        break;
-    case 'Millan_room':
+    }else if(!strcmp(folder,"Millan_room")){
         printf("You are in Millans' bedroom. This is the private area of the passenger called Millan.");
-        break;
-    case 'Wiam_room':
+    }else if(!strcmp(folder,"Wiam_room")){
         printf("You are in Wiames' bedroom. This is the private area of the passenger called Wiame.");
-        break;
-    case 'restaurant':
+    }else if(!strcmp(folder,"restaurant")){
         printf("You are in the trains restaurant wagon. Here all the passengers and staff can take a drink or eat something whenever they want.");
-        break;
-    case 'bathroom':
+    }else if(!strcmp(folder,"bathroom")){
         printf("You are in the bathroom.");
-        break;
-    case 'interrogation_room':
-        printf("YOu are in the interrogation room. Here is where you must bring the suspects you want to interrogate in order to talk with them.");
-        break;
-    case 'smoking_area':
+    }else if(!strcmp(folder,"interrogation_room")){
+        printf("You are in the interrogation room. Here is where you must bring the suspects you want to interrogate in order to talk with them.");
+    }else if(!strcmp(folder,"smoking_area")){
         printf("You are in the smoking area. This is the only room in which our passengers can smoke, it is forbidden in the rest of the train.");
-        break;
-    case 'Crime_secene':
+    }else if(!strcmp(folder,"Crime_scene")){
         printf("You are in the crime scene. Here is where the murder was commited.");
-        break;
-    case 'staff_room':
+    }else if(!strcmp(folder,"staff_room")){
         printf("You are in the staff room. This is the reservated area for the people who work on this train.");
-        break;
-    case 'locomotive':
+    }else if(!strcmp(folder,"locomotive")){
         printf("You are now in the locomotive. This is the head of the train, from here all the train is controled.");
-        break;
-    default:
-        break;
     }
+
     // get grandparent directory
     char s1[MAX_PATH];
     getcwd(s1,MAX_PATH);
