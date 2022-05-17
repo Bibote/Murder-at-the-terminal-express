@@ -16,6 +16,7 @@ int main(int argc, char const *argv[])
         printf("\033[0;32m");
         printf("This command only needs one argument to be used: lookaround. It shows all the objects and people on the room you are in.\n");
         printf("\033[0m");
+        return 1;
     }
     }
 
@@ -75,7 +76,7 @@ int main(int argc, char const *argv[])
         printf("\033[0;31m");
         printf("Could not open current directory\n");
         printf("\033[0m");
-        return -1;
+        return 0;
     }
     while ((ent = readdir(dir)) != NULL) {
         
@@ -89,5 +90,5 @@ int main(int argc, char const *argv[])
     closedir(dir);
 
 
-    return 0;
+    return 1;
 }
