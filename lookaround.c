@@ -62,7 +62,7 @@ int main(int argc, char const *argv[])
     }else if(!strcmp(folder,"locomotive")){
         printf("You are now in the locomotive. This is the head of the train, from here all the train is controled.");
     }
-
+    printf("\n");
     // get grandparent directory
     char s1[MAX_PATH];
     getcwd(s1,MAX_PATH);

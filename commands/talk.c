@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
     if(argc==2){
         if(!strcmp(argv[1], "help")) {
         printf("\033[0;32m");
-        printf("To talk with someone you will need to write their name, and what do you want to talk a about(physical/moral/identity/accusation), you need to be in the same room of the person you want to talk with.");
+        printf("To talk with someone you will need to write their name, and what do you want to talk a about(physical/moral/identity/accusation),\nyou need to be in the same room of the person you want to talk with.");
         printf("\n");
         printf("Remember that names start with Capital letters!!");
         printf("\n");
