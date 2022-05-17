@@ -28,16 +28,53 @@ int main(int argc, char* argv[])
     }
    
     if(!strcmp(argv[1], "Alvaro")) {
-    printf("\033[0;32m");
+    printf("\033[0;31m");
     printf("You cant interact with people, use the talk command");
     printf("\n");
     printf("\033[0m");
     return 1;
     }
 
+    if(!strcmp(argv[1], "Millan")) {    
+    printf("\033[0;31m");
+    printf("You cant interact with people, use the talk command");
+    printf("\n");
+    printf("\033[0m");
+    return 1;
+    }
+
+    if(!strcmp(argv[1], "Ahmed")) {    
+    printf("\033[0;31m");
+    printf("You cant interact with people, use the talk command");
+    printf("\n");
+    printf("\033[0m");
+    return 1;
+    }
     int fd;
 
+    if(!strcmp(argv[1], "Wiame")) {    
+    printf("\033[0;31m");
+    printf("You cant interact with people, use the talk command");
+    printf("\n");
+    printf("\033[0m");
+    return 1;
+    }
 
+    if(!strcmp(argv[1], "Edurne")) {    
+    printf("\033[0;31m");
+    printf("You cant interact with people, use the talk command");
+    printf("\n");
+    printf("\033[0m");
+    return 1;
+    }
+
+    if(!strcmp(argv[1], "Alex")) {    
+    printf("\033[0;31m");
+    printf("You cant interact with people, use the talk command");
+    printf("\n");
+    printf("\033[0m");
+    return 1;
+    }
     struct stat sfile;
     stat(argv[1], &sfile);
     fd = open(argv[1],O_RDONLY);
