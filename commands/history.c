@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
         printf("There has been an error with the history");
         printf("\n");
         printf("\033[0m");
-        return 1;
+        return 0;
     }
     int i=sfile.st_size;
     static char buff[100];
@@ -77,9 +77,12 @@ int main(int argc, char* argv[])
         printf("\033[0;31m");
         printf("error");
         printf("\033[0m");
+        return 0;
     }
     else {
+        printf("\033[0;35m");
         printf("%s",buff);
+        printf("\033[0m");
     }
 
     

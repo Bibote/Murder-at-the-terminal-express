@@ -67,6 +67,9 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
 }
 
 int registerCommand(char command[]) {
+   if(!strcmp(command, " history\n")) {
+      return 0;
+   }
    int fd;
 
 
@@ -75,7 +78,9 @@ int registerCommand(char command[]) {
     strcat(fileroute, "/history.txt");
     fd = open(fileroute,O_WRONLY | O_APPEND);
     if (fd == -1) {
-        printf("There has been an error with the history");
+        printf("\033[0;31m");
+        printf("There has been an error registering the command");
+        printf("\033[0m");
         printf("\n");
         return 1;
     }
