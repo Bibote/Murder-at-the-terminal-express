@@ -30,12 +30,9 @@ int go(int argc, char *argv[])
     }
     else if (chdir(argv[1]) == -1)
     {
-
         char s2[MAX_PATH];
             getcwd(s2,MAX_PATH);
             char *p = strrchr(s2, '/');
-            //printf("s2=%s\n",s2);
-            //printf("%s\n",p);
             *p = '\0';
             p = strrchr(s2, '/');
             char m[MAX_PATH];

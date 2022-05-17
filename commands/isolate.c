@@ -10,7 +10,6 @@
 #include<stdlib.h>
 #include<fcntl.h>
 #include <string.h>
-#include "go.c"
  #define MAX_PATH 200
 
 

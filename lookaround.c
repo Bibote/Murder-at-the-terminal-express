@@ -33,49 +33,49 @@ int main(int argc, char const *argv[])
 
     switch (folder)
     {
-    case "Luggage_room":
+    case 'Luggage_room':
         printf("You are in the luggage room. Here are stored all the bags and siutcases of all the passengers in the train.");
         break;
-    case "corridor":
+    case 'corridor':
         printf("You are in the bedrooms wagon.");
         break;
-    case "Ahmed_room":
+    case 'Ahmed_room':
         printf("You are in Ahmeds' bedroom. This is the private area of the passenger called Ahmed.");
         break;
-    case "Alex_room":
+    case 'Alex_room':
         printf("You are in Alexs' bedroom. This is the private area of the passenger called Alex.");
         break;
-    case "Alvaro_room":
+    case 'Alvaro_room':
     printf("You are in Alvaros' bedroom. This is the private area of the passenger called Alvaro.");
         break;
-    case "Edurne_room":
+    case 'Edurne_room':
         printf("You are in Edurnes' bedroom. This is the private area of the passenger called Edurne.");
         break;
-    case "Millan_room":
+    case 'Millan_room':
         printf("You are in Millans' bedroom. This is the private area of the passenger called Millan.");
         break;
-    case "Wiam_room":
+    case 'Wiam_room':
         printf("You are in Wiames' bedroom. This is the private area of the passenger called Wiame.");
         break;
-    case "restaurant":
+    case 'restaurant':
         printf("You are in the trains restaurant wagon. Here all the passengers and staff can take a drink or eat something whenever they want.");
         break;
-    case "bathroom":
+    case 'bathroom':
         printf("You are in the bathroom.");
         break;
-    case "interrogation_room":
+    case 'interrogation_room':
         printf("YOu are in the interrogation room. Here is where you must bring the suspects you want to interrogate in order to talk with them.");
         break;
-    case "smoking_area":
+    case 'smoking_area':
         printf("You are in the smoking area. This is the only room in which our passengers can smoke, it is forbidden in the rest of the train.");
         break;
-    case "Crime_secene":
+    case 'Crime_secene':
         printf("You are in the crime scene. Here is where the murder was commited.");
         break;
-    case "staff_room":
+    case 'staff_room':
         printf("You are in the staff room. This is the reservated area for the people who work on this train.");
         break;
-    case "locomotive":
+    case 'locomotive':
         printf("You are now in the locomotive. This is the head of the train, from here all the train is controled.");
         break;
     default:

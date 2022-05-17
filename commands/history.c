@@ -4,6 +4,8 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <sys/stat.h>
+
 
 #define MAX_PATH 200
 int main(int argc, char* argv[])

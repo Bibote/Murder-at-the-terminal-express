@@ -7,7 +7,7 @@
 #include <string.h>
 #include <errno.h>
 #include<sys/wait.h>
-#include"go.c"
+#include"commands/go.c"
 #include <fcntl.h>
 #include<signal.h>
 
@@ -119,10 +119,12 @@ int execute(int argc, char *argv[])
    int j;
    int i;
    char function[80];
-   strcpy(function, argv[0]);
+   strcpy(function, "commands/");
+   strcat(function, argv[0]);
    char ruta[80];
    strcpy(ruta, route);
    strcat(ruta, "/");
+   
    strcat(ruta, function);
     pid=fork();
     
@@ -155,7 +157,7 @@ int execute(int argc, char *argv[])
 
 int main ()
 {
-   char * Prompt = "your_room> ";
+   char * Prompt = "Lugage_room> ";
    int eof= 0;
    int argc;
    char *args[MAXARGS];
@@ -168,7 +170,7 @@ int main ()
    //chmod("crimescene",444);
 
    strcpy(route, getcwd(cwd,sizeof(cwd)));
-   chdir("your_room");
+   chdir("Luggage_room");
    signal(SIGALRM,sig_handler); // Register signal handler
  
   alarm(600);  // Scheduled alarm for 10 minutes 

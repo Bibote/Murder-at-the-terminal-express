@@ -4,11 +4,12 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 
 
 int main(int argc, char* argv[])
 {
-    printf(argv[1]);
+    printf("%s",argv[1]);
     if(argc!=2){
         
         printf("\033[0;31m");
@@ -49,7 +50,7 @@ int main(int argc, char* argv[])
         printf("\033[0m");
     }
     else {
-        printf(buff);
+        printf("%s",buff);
     }
 
     
