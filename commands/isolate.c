@@ -62,7 +62,7 @@ int main(int argc, char  *argv[])
                     unlink(argv[1]);
                     printf("Suspect is now in %s\n",argv[2]);
 
-                    return 0;
+                    return 1;
                 }
             else if (strcmp(p,argv[2])==0)
             {
@@ -73,7 +73,7 @@ int main(int argc, char  *argv[])
                 printf("Suspect is now in %s\n",argv[2]);
 
             
-            return 0;
+            return 1;
             }
             else {
                     printf("this room isn't  accessible from current room\n");
