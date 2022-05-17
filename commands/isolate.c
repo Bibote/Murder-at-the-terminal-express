@@ -33,7 +33,7 @@ int main(int argc, char  *argv[])
         else
         {
             printf("\033[0;31m");
-            printf("Wrong ammount of parameters");
+            printf("Wrong ammount of parameters\n");
             printf("\033[0m");
             return 0;
         }
@@ -52,7 +52,6 @@ int main(int argc, char  *argv[])
             *p = '\1';
         if ((file = fopen(argv[1], "r")))
         {
-            printf("file exist");
             fclose(file);
             if (dir) {
                     //printf("dossier existe");
@@ -65,7 +64,7 @@ int main(int argc, char  *argv[])
 
                     return 0;
                 }
-            else if (strcmp(p,argv[2]))
+            else if (strcmp(p,argv[2])==0)
             {
                 strcat(s1,"/");
                 strcat(s1,argv[1]);
@@ -77,14 +76,14 @@ int main(int argc, char  *argv[])
             return 0;
             }
             else {
-                    printf("this room isn't  accessible from current room");
+                    printf("this room isn't  accessible from current room\n");
                     return 0;
                 }
 
         }
         else
         {
-            printf("file doesn't exist");
+            printf("item doesn't exist\n");
             return 0;
         }
 
