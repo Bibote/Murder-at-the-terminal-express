@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
         printf("There is no object with that name in the room with you");
         printf("\n");
         printf("\033[0m");
-        return 1;
+        return 0;
     }
     int i=sfile.st_size;
     static char buff[100];
