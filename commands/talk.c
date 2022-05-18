@@ -36,6 +36,8 @@ int main(int argc, char* argv[])
         printf("\033[0m");
         return 0;
     }
+
+    //We get the name of the room
     char cwd[MAX_PATH];
     char folder[10];
     getcwd(cwd, sizeof(cwd));
@@ -46,6 +48,7 @@ int main(int argc, char* argv[])
             j=i;
         }
     }
+    //We check if we are in the right room
     memcpy(folder,&cwd[j+1],strlen(cwd)-j);
     if(strcmp(folder, "interrogation_room")) {
         printf("\033[0;31m");
@@ -58,6 +61,8 @@ int main(int argc, char* argv[])
     int fd;
     char name[20];
     strcpy(name,argv[1]);
+
+    //We check if the person the user wants to talk to is in the train.
     int real =0;
     if(strcmp(name, "Millan")  ) {
         real=1;
