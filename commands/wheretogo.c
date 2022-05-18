@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
         printf("\033[0;31m");
         printf("Could not open current directory\n");
         printf("\033[0m");
-        return -1;
+        return 0;
     }
     
     while ((ent = readdir(dir)) != NULL) {
@@ -81,5 +81,5 @@ int main(int argc, char const *argv[])
 
 
     
-    return 0;
+    return 1;
 }
