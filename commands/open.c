@@ -15,8 +15,8 @@ int main(int argc, char const *argv[])
         {
             if (strcmp(argv[2],"1234")==0)
             {
-                chmod(argv[1],444);
-                printf("\nYou can access the crime scene now \n");
+                chmod(argv[1],0777);
+                printf("\nYou can access Marc's room \n");
             }
             
             

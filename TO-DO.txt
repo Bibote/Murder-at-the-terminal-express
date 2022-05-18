@@ -30,11 +30,11 @@ error. For example:
 ls: cannot access añsldk: No such file or directory
 • Every command should have a man page with its specification.
 
-Millán:modify talk function to used sys calls and stat
-Alex:prepare the files and directories(permisions and create the objects)
-Ahmed:link/unlink
-Wiame: game finishing
-Alvaro:pipes
 
+lookaround marc room Alex
+wheretogo map Alex
+upload server Millan
+init function print text presentation Alex
+report Wiame, Alvaro, Ahmed Millan
 
 
