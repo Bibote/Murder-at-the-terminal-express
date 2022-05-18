@@ -58,13 +58,28 @@ int main(int argc, char* argv[])
     int fd;
     char name[20];
     strcpy(name,argv[1]);
-    /*
-    if(strcmp(name, "Millan") || strcmp(name, "Edurne") || strcmp(name, "Alvaro")|| strcmp(name, "Alex")|| strcmp(name, "Marc")|| strcmp(name, "Wiame") ) {
+    int real =0;
+    if(strcmp(name, "Millan")  ) {
+        real=1;
+    }
+    else if(strcmp(name, "Edurne")  ) {
+        real=1;
+    }
+    else if(strcmp(name, "Edurne")  ) {
+        real=1;
+    }
+    else if(strcmp(name, "Edurne")  ) {
+        real=1;
+    }
+    else if(strcmp(name, "Edurne")  ) {
+        real=1;
+    }
+    if(real==0) {
         printf("\033[0;31m");
         printf("There is no one with that name in the train\n");
         printf("\033[0m");
         return 0;
-    }*/
+    }
     
     //We use the open system call for the person we want to talk with in read mode.
     fd = open(name,O_RDONLY);
