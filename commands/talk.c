@@ -58,7 +58,13 @@ int main(int argc, char* argv[])
     int fd;
     char name[20];
     strcpy(name,argv[1]);
-    strcat(name,".txt");
+    if(strcmp(name, "Millan") || strcmp(name, "Edurne") || strcmp(name, "Alvaro")|| strcmp(name, "Alex")|| strcmp(name, "Marc")|| strcmp(name, "Wiame") ) {
+        printf("\033[0;31m");
+        printf("There is no one with that name in the train\n");
+        printf("\033[0m");
+        return 0;
+    }
+    
     //We use the open system call for the person we want to talk with in read mode.
     fd = open(name,O_RDONLY);
 

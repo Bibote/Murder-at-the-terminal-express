@@ -48,7 +48,9 @@ int go(int argc, char *argv[])
          }
          else
          {
+            printf("\033[0;31m");
             printf("You can't go to this room\n");
+            printf("\033[0m");
             return 0;
          }
          
