@@ -48,6 +48,8 @@ int main(int argc, char const *argv[])
         printf("You are in Millans' bedroom. This is the private area of the passenger called Millan.");
     }else if(!strcmp(folder,"Wiam_room")){
         printf("You are in Wiames' bedroom. This is the private area of the passenger called Wiame.");
+    }else if(!strcmp(folder,"Marc_room")){
+            printf("You are in Marcs' bedroom. This is the private area of the passenger called Marc.");
     }else if(!strcmp(folder,"restaurant")){
         printf("You are in the trains restaurant wagon. Here all the passengers and staff can take a drink or eat something whenever they want.");
     }else if(!strcmp(folder,"bathroom")){
