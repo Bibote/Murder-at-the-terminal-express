@@ -1,4 +1,4 @@
-// myShell0
+   // myShell0
 //////////////////////////////////////////////////
 #define _XOPEN_SOURCE 700
 #include <stdio.h>
@@ -179,6 +179,7 @@ int execute(int argc, char *argv[])
 
 int main ()
 {
+   printf("Hi investigartor!! We are glad you are here... Unfortunately a murder has been commited in this train while it was on trip. We need you!! \n We hope that you can solve this unfortunate event. For doing that you are free to move around the train and interact with every onbject you fuond. \n Oh! O I was frogetting that you can interrogate every passenger in the train, we have prepared an special room for that near the restaurant, and we haven't tpuched anything on the crime scene. \n Everyone hopes you find the culprit of this... Good luck.");
    char * Prompt = "Lugage_room> ";
    int eof= 0;
    int argc;
