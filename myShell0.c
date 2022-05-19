@@ -66,17 +66,19 @@ int read_args(int* argcp, char* args[], int max, int* eofp)
    return 1;
 }
 
+//Function to register the commands
 int registerCommand(char command[]) {
+   //It ignores the history command
    if(!strcmp(command, " history\n")) {
       return 0;
    }
+   //it opens the file of the history
    int fd;
-
-
     char fileroute[80];
     strcpy(fileroute, route);
     strcat(fileroute, "/history.txt");
     fd = open(fileroute,O_WRONLY | O_APPEND);
+    //It checks if it opens the file correctly
     if (fd == -1) {
         printf("\033[0;31m");
         printf("There has been an error registering the command");
@@ -85,7 +87,7 @@ int registerCommand(char command[]) {
         return 1;
     }
 
-
+   //It writtes the command in the file.
    char store[50];
    strcpy(store,command);
     write(fd,store,strlen(store));
@@ -93,17 +95,22 @@ int registerCommand(char command[]) {
 
     
 
-    
+    //Closes everything.
     close(fd);
-    printf("\n");
     return(1);
 }
+
+//Function that handles the alarm signal of the alarm to end the game
 void sig_handler(int signum){
   printf("\033[0;36m");
   printf("\nTime is up, the train has reached its station, its time to decide who you think the assasin is:\n");
   char name[20];
   printf("\033[0m");
+
+  //Gets the decision of the user
   scanf("%s", &name);
+
+  //Checks if the name of the assasin is correct to end the game
   if(!strcmp(name, "Edurne") || !strcmp(name, "edurne") ) {
       printf("\033[0;32m");
       printf("Congratulations detective, you managed to catch the assasin\n");
@@ -114,10 +121,11 @@ void sig_handler(int signum){
   printf("You were wrong, and left the assasin free\n");
   printf("\033[0m");
   }
-  
+  //Exits the father proccess closing the shell
   exit(0);
 }
 
+//This function will execute every command except the go
 int execute(int argc, char *argv[])
 {
    pid_t pid;
@@ -131,27 +139,36 @@ int execute(int argc, char *argv[])
    strcat(ruta, "/");
    
    strcat(ruta, function);
+    //We fork to create the child proccess
     pid=fork();
     
+    //The child proccess will do this
     if (pid==0) {
+
        char bufCom[50]="";
-       
+       //Registers the commands for the history
       for(j=0;j<argc;j=j+1) {
          strcat(bufCom, " ");
          strcat(bufCom, argv[j]);
       }
       strcat(bufCom,"\n");
       registerCommand(bufCom); 
+
+      //Child proccess executes the program
          i=execv(ruta,argv);
        if(i=-1) {
             printf("That command doesn't exist");
          }
       int i=1;
       printf("\n");
+      //Kills the child proccess
        exit(pid);
       
     }
+
+    //The father proccess will do this
     else {
+       //The father waits for the child
         wait(NULL);
      }
       

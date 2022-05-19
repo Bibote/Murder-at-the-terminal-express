@@ -9,6 +9,7 @@
 
 int main(int argc, char* argv[])
 {
+    //First it checks the ammount of arguments
     if(argc!=2){
         printf("\033[0;31m");
         printf("Wrong ammount of parameters");
@@ -16,7 +17,7 @@ int main(int argc, char* argv[])
         printf("\033[0m");
         return 0;
     }
- 
+    //It displays the help of the function
     if(!strcmp(argv[1], "help")) {
     printf("\033[0;32m");
     printf("You just need to write the object you want to interact with. For example: interact object");
@@ -24,7 +25,7 @@ int main(int argc, char* argv[])
     printf("\033[0m");
     return 1;
     }
-   
+    //It looks if its a person 
     if(!strcmp(argv[1], "Alvaro")) {
     printf("\033[0;31m");
     printf("You cant interact with people, use the talk command");
@@ -73,6 +74,7 @@ int main(int argc, char* argv[])
     return 1;
     }
 
+    //
     int fd;
     struct stat sfile;
     stat(argv[1], &sfile);
