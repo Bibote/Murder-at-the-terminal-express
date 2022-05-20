@@ -30,13 +30,19 @@ int main(int argc, char  *argv[])
             system("clear");
             return 1;
         }
-        else
-        {
+    
+        else{
             printf("\033[0;31m");
-            printf("Wrong ammount of parameters");
+            printf("\nWrong amount of parameters\n");
             printf("\033[0m");
-            return 0;
+        return 0;
         }
+    }
+    if(argc!=3){
+        printf("\033[0;31m");
+        printf("Wrong ammount of parameters\n");
+        printf("\033[0m");
+        return 0;
     }
     else
     {

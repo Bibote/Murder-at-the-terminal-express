@@ -8,7 +8,7 @@
 int main(int argc, char const *argv[])
 {
     
-    if(argc!=3)
+    if(argc=2)
     {
         if (strcmp(argv[1],"help")==0)
         {
@@ -22,11 +22,17 @@ int main(int argc, char const *argv[])
             return 1;
         }
         else{
-             printf("\033[0;31m");
+            printf("\033[0;31m");
             printf("\nWrong amount of parameters\n");
             printf("\033[0m");
         return 0;
         }
+    }
+    if(argc!=3){
+        printf("\033[0;31m");
+        printf("Wrong ammount of parameters\n");
+        printf("\033[0m");
+        return 0;
     }
     if (argc==3) //correct command
     {
