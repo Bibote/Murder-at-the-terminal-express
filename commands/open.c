@@ -21,6 +21,12 @@ int main(int argc, char const *argv[])
             system("clear");
             return 1;
         }
+        else{
+             printf("\033[0;31m");
+            printf("\nWrong amount of parameters\n");
+            printf("\033[0m");
+        return 0;
+        }
     }
     if (argc==3) //correct command
     {
