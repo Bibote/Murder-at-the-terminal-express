@@ -40,8 +40,8 @@ int main(int argc, char const *argv[])
     printf("                  ^            ^         |_ _ _ _|       ^           			                     |_ _ _ _ _ _ _ _|                                         \n");
     printf("                    \\\\      \\\\              ^           //                     			                    ^                                                  \n");
     printf("                       \\\\       \\\\          |        //                      	 			            |                                                  \n");
-    printf("                          \\\\     \\\\         |       //                           			                    |                                                  \n");
-    printf("                             \\\\      \\\\     |     //                            	 			            |                                                  \n");
+    printf("                          \\\\     \\\\         |       //                           			                |                                                  \n");
+    printf("                             \\\\      \\\\     |     //                            	 			          |                                                  \n");
     printf("           _ _ _ _ _ _ _ _ _ _        \\\\  _ _ _ _ _          _ _ _ _ _ _         _ _ _ _ _ _ _          _ _ _ _ _ _ _          _ _ _ _ _ _            _ _ _ _ _ _ \n");
     printf("          |                   |          |          |       |            |       |interrogation|       |              |        |            |        |            |\n");
     printf("	  |    Luggageroom    | =======> | Corridor | ====> | Restaurant | ====> |room         | ====> | Crime scene  | =====> | Staff room | =====> | Locomotive |\n");
