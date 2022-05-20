@@ -11,14 +11,20 @@
 
 int main(int argc, char const *argv[])
 {
-    if(argc==2){
-        if(!strcmp(argv[1], "help")) {
+    if(argc==2 && strcmp(argv[1], "help")==0){
+        
         printf("\033[0;32m");
         printf("This command only needs one argument to be used: lookaround. It shows all the objects and people on the room you are in.\n");
         printf("\033[0m");
         return 1;
     }
+    else if (argc!=1){
+        printf("\033[0;31m");
+        printf("Wrong ammount of parameters\n");
+        printf("\033[0m");
+        return 0;
     }
+    
 
         char cwd[MAX_PATH];
     char folder[10];

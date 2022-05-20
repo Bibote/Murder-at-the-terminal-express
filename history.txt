@@ -1,10 +1,2 @@
- go corridor
- go restaurant
- go isolation_room
- go isolation_room
- go interrogation_room
- isolate Alex restaurant
- go restaurant
- lookaround
- isolate Alex interogation_room
- isolate Alex interrogation_room
+ isolate
+ talk
