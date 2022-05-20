@@ -30,6 +30,7 @@ int main(int argc, char const *argv[])
             {
                 chmod(argv[1],0777);
                 printf("\nYou can access Marc's room \n");
+                return 1;
             }
             
             
@@ -41,6 +42,7 @@ int main(int argc, char const *argv[])
         printf("\033[0;31m");
         printf("\nWrong input\n");
         printf("\033[0m");
+        return 0;
     }
 
     
