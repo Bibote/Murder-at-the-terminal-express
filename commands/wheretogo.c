@@ -42,18 +42,18 @@ int main(int argc, char const *argv[])
     printf("                        \\          \\       |       //                      	 			                |");
     printf("                             \\        \\    |    //                           			                    |");
     printf("                                 \\       \\ | //                            	 			                |");
-    printf("       _ _ _ _ _ _ _ _ _ _            \\ _ _ _ _ _                       _ _ _ _ _ _                _ _ _ _ _ _ _               _ _ _ _ _ _ _                _ _ _ _ _ _                _ _ _ _ _ _ ");
-    printf("      |                   |             |          |                    |            |             |interrogation|             |              |             |            |             |            |");
-    printf("	  |    Luggageroom    | ==========> | Corridor | =================> | Restaurant | ==========> |room         | ==========> | Crime scene  | ==========> | Staff room | ==========> | Locomotive |");
-    printf("	  |_ _ _ _ _ _ _ _ _ _|             |_ _ _ _ _ |                    |_ _ _ _ _ _ |             |_ _ _ _ _ _ _|             |_ _ _ _ _ _ _ |             |_ _ _ _ _ _ |             |_ _ _ _ _ _ |");
-    printf("                                          // | \\                              |");
-    printf("                                       //    |    \\                           |");
-    printf("                                    //       |       \\                        |");
-    printf("                                 //          v          \\                     v");
-    printf("                                v        _ _ _ _ _        v               _ _ _ _ _ ");
-    printf("                            _ _ _ _     |  Millan |    _ _ _ _           |          |");
-    printf("                           | Edurne |   |  room   |   | Wiame |          | Bathroom |");
-    printf("                           |  room  |   |_ _ _ _ _|   | room  |          |_ _ _ _ _ |");
+    printf("       _ _ _ _ _ _ _ _ _ _            \\ _ _ _ _ _                 _ _ _ _ _ _             _ _ _ _ _ _ _            _ _ _ _ _ _ _            _ _ _ _ _ _          _ _ _ _ _ _ ");
+    printf("      |                   |             |          |              |            |          |interrogation|         |              |         |            |        |            |");
+    printf("	  |    Luggageroom    | ==========> | Corridor | ===========> | Restaurant | =======> |room         | ======> | Crime scene  | ======> | Staff room | =====> | Locomotive |");
+    printf("	  |_ _ _ _ _ _ _ _ _ _|             |_ _ _ _ _ |              |_ _ _ _ _ _ |          |_ _ _ _ _ _ _|         |_ _ _ _ _ _ _ |         |_ _ _ _ _ _ |        |_ _ _ _ _ _ |");
+    printf("                                          // | \\                       |");
+    printf("                                       //    |    \\                    |");
+    printf("                                    //       |       \\                 |");
+    printf("                                 //          v          \\              v");
+    printf("                                v        _ _ _ _ _        v          _ _ _ _ _ ");
+    printf("                            _ _ _ _     |  Millan |    _ _ _ _      |          |");
+    printf("                           | Edurne |   |  room   |   | Wiame |     | Bathroom |");
+    printf("                           |  room  |   |_ _ _ _ _|   | room  |     |_ _ _ _ _ |");
     printf("                           |_ _ _ _ |                 |_ _ _ _|");
 
     //get name of the current directory
