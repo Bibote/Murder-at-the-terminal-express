@@ -44,8 +44,7 @@ int main(int argc, char  *argv[])
         printf("\033[0m");
         return 0;
     }
-    else
-    {
+    
         DIR* dir = opendir(argv[2]);
         FILE *file;
         char s1[MAX_PATH];
@@ -109,7 +108,7 @@ int main(int argc, char  *argv[])
 
             
                 
-    }
+    
 
 }
 
