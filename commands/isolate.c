@@ -58,11 +58,11 @@ int main(int argc, char  *argv[])
             p=p+1;
         if ((file = fopen(argv[1], "r")))
         {
-            printf("file exist\n");
+            //printf("file exist\n");
             fclose(file);
-            printf("arg :%s\n",argv[2]);
-            printf("p:%s\n",p);
-            printf("s1:%s\n",s1);
+            //printf("arg :%s\n",argv[2]);
+            //printf("p:%s\n",p);
+            //printf("s1:%s\n",s1);
             //int tp;
             //int targ;
             //tp=strlen(argv[2]);
