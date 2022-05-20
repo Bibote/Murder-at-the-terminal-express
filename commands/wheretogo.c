@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
         }
     }
     
-    
+    printf("");
     printf("                _ _ _        _ _ _                    _ _ _ _ ");
     printf("               | Marc |     | Alex |      _ _ _ _    | Alvaro |      		                            _ _ _ _ _ _ _ _");
     printf("               | room |     | room |     | Ahmed |   |  room  |      			                       |               |");
