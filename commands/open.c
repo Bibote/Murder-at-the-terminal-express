@@ -7,8 +7,21 @@
 
 int main(int argc, char const *argv[])
 {
-    printf("Enter");
     
+    if(argc!=3)
+    {
+        if (strcmp(argv[1],"help")==0)
+        {
+            printf("\033[0;32m");
+            printf("\n\n Enter the correct password in order to unlock Marcs_room\n");
+            printf("Command syntax : open room_name password \n");
+            printf("\nPress enter key to continue investigating");
+            printf("\033[0m");
+            getchar();
+            system("clear");
+            return 1;
+        }
+    }
     if (argc==3) //correct command
     {
         if (strcmp(argv[1],"Marc_room")==0)
