@@ -145,14 +145,7 @@ int execute(int argc, char *argv[])
     //The child proccess will do this
     if (pid==0) {
 
-       char bufCom[50]="";
-       //Registers the commands for the history
-      for(j=0;j<argc;j=j+1) {
-         strcat(bufCom, " ");
-         strcat(bufCom, argv[j]);
-      }
-      strcat(bufCom,"\n");
-      registerCommand(bufCom); 
+        
 
       //Child proccess executes the program
          i=execv(ruta,argv);
@@ -179,7 +172,7 @@ int execute(int argc, char *argv[])
 
 int main ()
 {
-   printf("Hi investigator!! We are glad you are here... Unfortunately a murder has been commited in this train while it was on trip. We need you!! \n We hope that you can solve this unfortunate event. For doing that you are free to move around the train and interact with every object you fuond. \n Oh! O I was forgetting that you can interrogate every passenger in the train, we have prepared an special room for that near the restaurant, and we haven't touched anything on the crime scene. \n Everyone hopes you find the person that has done this... Good luck.");
+   printf("Hi investigator!! We are glad you are here... Unfortunately a murder has been commited in this train while it was on trip. We need you!! \n We hope that you can solve this unfortunate event. For doing that you are free to move around the train and interact with every object you fuond. \n Oh! O I was forgetting that you can interrogate every passenger in the train, we have prepared an special room for that near the restaurant, and we haven't touched anything on the crime scene.\n");
    char * Prompt = "Lugage_room> ";
    int eof= 0;
    int argc;
@@ -200,10 +193,18 @@ int main ()
    while (1) {
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
+         int j;
+         char bufCom[50]="";
+       //Registers the commands for the history
+      for(j=0;j<argc;j=j+1) {
+         strcat(bufCom, " ");
+         strcat(bufCom, args[j]);
+      }
+      strcat(bufCom,"\n");
+      registerCommand(bufCom);
          if (!strcmp(args[0],"go"))
          {
             if(go(argc,args)==1 && strcmp(args[1],"help")){
-            
             char newPrompt[30]="";
             Prompt= strcat(newPrompt,args[1]);
             strcat(Prompt, ">> ");
