@@ -170,7 +170,7 @@ char executepipes(int argc, char *argv[])
          }
       int i=1;
       printf("\n");
-      printf(izena);
+      //printf(izena);
       return izena;
       
       //Kills the child proccess
