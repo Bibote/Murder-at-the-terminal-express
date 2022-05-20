@@ -32,9 +32,22 @@ int main(int argc, char const *argv[])
                 printf("\nYou can access Marc's room \n");
                 return 1;
             }
+            else
+    {   
+        printf("\033[0;31m");
+        printf("\nWrong password\n");
+        printf("\033[0m");
+        return 0;
+    }
             
             
-        }
+        }else
+    {   
+        printf("\033[0;31m");
+        printf("\nWrong input\n");
+        printf("\033[0m");
+        return 0;
+    }
         
     }
     else
