@@ -126,6 +126,70 @@ void sig_handler(int signum){
 }
 
 //This function will execute every command except the go
+char executepipes(int argc, char *argv[])
+{
+   pid_t pid;
+   int j;
+   int i;
+   int fd[2];
+   char function[80];
+   strcpy(function, "commands/");
+   strcat(function, argv[0]);
+   char ruta[80];
+   strcpy(ruta, route);
+   strcat(ruta, "/");
+   
+   strcat(ruta, function);
+    //We fork to create the child proccess
+    pipe(fd);
+    pid=fork();
+    
+    //The child proccess will do this
+    if (pid==0) {
+       close(fd[1]); 
+  
+       // closing the standard output
+      close(0);    
+  
+      // duplicating fd[0] with standard output 1
+      dup(fd[0]);  
+      char izena = read(1,argv[2],strlen(argv[2]+1));
+      char bufCom[50]="";
+       //Registers the commands for the history
+      for(j=0;j<argc;j=j+1) {
+         strcat(bufCom, " ");
+         strcat(bufCom, argv[j]);
+      }
+      strcat(bufCom,"\n");
+      registerCommand(bufCom); 
+       
+      //Child proccess executes the program
+         i=execv(ruta,argv);
+       if(i=-1) {
+            printf("That command doesn't exist");
+         }
+      int i=1;
+      printf("\n");
+      printf(izena);
+      return izena;
+      
+      //Kills the child proccess
+       exit(pid);
+      
+    
+    }
+    //The father proccess will do this
+    else {
+       //The father waits for the child
+        wait(NULL);
+         close(fd[0]); 
+  
+       // duplicating fd[0] with standard input 0
+      dup(fd[1]); 
+      char izena;
+      write(1, argv[2],strlen(argv[2]+1));
+    }
+}
 int execute(int argc, char *argv[])
 {
    pid_t pid;
