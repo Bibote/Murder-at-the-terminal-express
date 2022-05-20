@@ -33,20 +33,28 @@ int main(int argc, char const *argv[])
     }
     
  
-
-    printf("       _ _ _ _ _ _ _ _ _ _       _ _ _ _ _ _ _          _ _ _ _ _ _         _ _ _ _ _ _ _         _ _ _ _ _ _ _        _ _ _ _ _ _         _ _ _ _ _ _ ");
-    printf("      |                   |     |   Corridor  |        |            |      |interrogation|      |              |      |            |      |            |");
-    printf("	  |    Luggageroom    | ===>| (all rooms) | ====>  | Restaurant | ===> |room         | ===> | Crime scene  | ===> | Staff room | ===> | Locomotive |");
-    printf("	  |_ _ _ _ _ _ _ _ _ _|     | _ _ _ _ _ _ |        |_ _ _ _ _ _ |      |_ _ _ _ _ _ _|      |_ _ _ _ _ _ _ |      |_ _ _ _ _ _ |      |_ _ _ _ _ _ |");
-    printf("                                                                   |");
-    printf("                                                                   |");
-    printf("                                                                   |");
-    printf("                                                                   v");
-    printf("                                                               _ _ _ _ _ ");
-    printf("                                                              |          |");
-    printf("                                                              | Bathroom |");
-    printf("                                                              |_ _ _ _ _ |");
-    
+    printf("                _ _ _        _ _ _                    _ _ _ _ \n");
+    printf("               | Marc |     | Alex |      _ _ _ _    | Alvaro |      		                            _ _ _ _ _ _ _ _\n");
+    printf("               | room |     | room |     | Ahmed |   |  room  |      			                       |               |\n");
+    printf("               |_ _ _ |     |_ _ _ |     | room  |   |_ _ _ _ |      			                       |  smoking room |\n");
+    printf("                  ^            ^         |_ _ _ _|       ^           			                       |_ _ _ _ _ _ _ _|\n");
+    printf("                   \\            \\          ^          //                     			                    ^\n");
+    printf("                        \\          \\       |       //                      	 			                |\n");
+    printf("                             \\        \\    |    //                           			                    |\n");
+    printf("                                 \\       \\ | //                            	 			                |\n");
+    printf("       _ _ _ _ _ _ _ _ _ _            \\ _ _ _ _ _                       _ _ _ _ _ _                _ _ _ _ _ _ _               _ _ _ _ _ _ _                _ _ _ _ _ _                _ _ _ _ _ _ \n");
+    printf("      |                   |             |          |                    |            |             |interrogation|             |              |             |            |             |            |\n");
+    printf("	  |    Luggageroom    | ==========> | Corridor | =================> | Restaurant | ==========> |room         | ==========> | Crime scene  | ==========> | Staff room | ==========> | Locomotive |\n");
+    printf("	  |_ _ _ _ _ _ _ _ _ _|             |_ _ _ _ _ |                    |_ _ _ _ _ _ |             |_ _ _ _ _ _ _|             |_ _ _ _ _ _ _ |             |_ _ _ _ _ _ |             |_ _ _ _ _ _ |\n");
+    printf("                                          // | \\                              |\n");
+    printf("                                       //    |    \\                           |\n");
+    printf("                                    //       |       \\                        |\n");
+    printf("                                 //          v          \\                     v\n");
+    printf("                                v        _ _ _ _ _        v               _ _ _ _ _ \n");
+    printf("                            _ _ _ _     |  Millan |    _ _ _ _           |          |\n");
+    printf("                           | Edurne |   |  room   |   | Wiame |          | Bathroom |\n");
+    printf("                           |  room  |   |_ _ _ _ _|   | room  |          |_ _ _ _ _ |\n");
+    printf("                           |_ _ _ _ |                 |_ _ _ _|\n");
 
     //get name of the current directory
     char s0[MAX_PATH];
