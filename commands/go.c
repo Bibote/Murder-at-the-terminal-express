@@ -13,9 +13,9 @@ int go(int argc, char *argv[])
     printf("%s\n", getcwd(s, 200));
 
     if (argc != 2)
-    {   printf("\033[0;31m");
+    {   //printf("\033[0;31m");
         printf("Invalid number of arguments\n");
-        printf("\033[0m");
+        //printf("\033[0m");
         return 0;
     }
     if (!strcmp(argv[1], "help"))
@@ -48,9 +48,9 @@ int go(int argc, char *argv[])
          }
          else
          {
-            printf("\033[0;31m");
+            //printf("\033[0;31m");
             printf("You can't go to this room\n");
-            printf("\033[0m");
+            //printf("\033[0m");
             return 0;
          }
          

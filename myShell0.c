@@ -191,6 +191,7 @@ int main ()
  
   alarm(600);  // Scheduled alarm for 10 minutes 
    while (1) {
+      printf("\033[0m");
       write(0,Prompt, strlen(Prompt));
       if (read_args(&argc, args, MAXARGS, &eof) && argc > 0) {
          int j;
