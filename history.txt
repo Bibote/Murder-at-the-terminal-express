@@ -1,7 +1,10 @@
- wheretogo
- lookarround
+ go corridor
+ go restaurant
+ go isolation_room
+ go isolation_room
+ go interrogation_room
+ isolate Alex restaurant
+ go restaurant
  lookaround
- isolate Ahmed corridor
- make
- lookaround
- isolate Ahmed Ahmed_room
+ isolate Alex interogation_room
+ isolate Alex interrogation_room

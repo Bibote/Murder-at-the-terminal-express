@@ -17,7 +17,7 @@ lookaround : commands/lookaround.c
 	gcc -o commands/lookaround commands/lookaround.c
 myShell0 : myShell0.c
 	gcc -o myShell0 myShell0.c
-	./myShell0
+	
 
 
 

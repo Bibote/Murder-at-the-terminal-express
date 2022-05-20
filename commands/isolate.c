@@ -33,7 +33,7 @@ int main(int argc, char  *argv[])
         else
         {
             printf("\033[0;31m");
-            printf("Wrong ammount of parameters\n");
+            printf("Wrong ammount of parameters");
             printf("\033[0m");
             return 0;
         }
@@ -50,9 +50,21 @@ int main(int argc, char  *argv[])
             strcpy(s2,s1);
             p = strrchr(s2, '/');
             *p = '\1';
+            p=p+1;
         if ((file = fopen(argv[1], "r")))
         {
+            printf("file exist\n");
             fclose(file);
+            printf("arg :%s\n",argv[2]);
+            printf("p:%s\n",p);
+            printf("s1:%s\n",s1);
+            //int tp;
+            //int targ;
+            //tp=strlen(argv[2]);
+            //targ=strlen(p);
+            //printf("tp:%d\n",tp);
+            //printf("targ:%d\n",targ);
+
             if (dir) {
                     //printf("dossier existe");
                     closedir(dir);
@@ -62,10 +74,12 @@ int main(int argc, char  *argv[])
                     unlink(argv[1]);
                     printf("Suspect is now in %s\n",argv[2]);
 
-                    return 1;
+                    return 0;
                 }
+                
             else if (strcmp(p,argv[2])==0)
             {
+                
                 strcat(s1,"/");
                 strcat(s1,argv[1]);
                 link(argv[1],s1);
@@ -73,7 +87,7 @@ int main(int argc, char  *argv[])
                 printf("Suspect is now in %s\n",argv[2]);
 
             
-            return 1;
+            return 0;
             }
             else {
                     printf("this room isn't  accessible from current room\n");
@@ -83,7 +97,7 @@ int main(int argc, char  *argv[])
         }
         else
         {
-            printf("item doesn't exist\n");
+            printf("file doesn't exist\n");
             return 0;
         }
 
