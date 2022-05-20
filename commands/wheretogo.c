@@ -34,10 +34,10 @@ int main(int argc, char const *argv[])
     
  
 
-    printf("       _ _ _ _ _ _ _ _ _ _            _ _ _ _ _ _ _          _ _ _ _ _ _             _ _ _ _ _ _ _           _ _ _ _ _ _ _            _ _ _ _ _ _          _ _ _ _ _ _ ");
-    printf("      |                   |          |   Corridor  |        |            |          |interrogation|         |              |         |            |        |            |");
-    printf("	  |    Luggageroom    | ========>| (all rooms) | ====>  | Restaurant | =======> |room         | ======> | Crime scene  | ======> | Staff room | =====> | Locomotive |");
-    printf("	  |_ _ _ _ _ _ _ _ _ _|          | _ _ _ _ _ _ |        |_ _ _ _ _ _ |          |_ _ _ _ _ _ _|         |_ _ _ _ _ _ _ |         |_ _ _ _ _ _ |        |_ _ _ _ _ _ |");
+    printf("       _ _ _ _ _ _ _ _ _ _       _ _ _ _ _ _ _          _ _ _ _ _ _         _ _ _ _ _ _ _         _ _ _ _ _ _ _        _ _ _ _ _ _         _ _ _ _ _ _ ");
+    printf("      |                   |     |   Corridor  |        |            |      |interrogation|      |              |      |            |      |            |");
+    printf("	  |    Luggageroom    | ===>| (all rooms) | ====>  | Restaurant | ===> |room         | ===> | Crime scene  | ===> | Staff room | ===> | Locomotive |");
+    printf("	  |_ _ _ _ _ _ _ _ _ _|     | _ _ _ _ _ _ |        |_ _ _ _ _ _ |      |_ _ _ _ _ _ _|      |_ _ _ _ _ _ _ |      |_ _ _ _ _ _ |      |_ _ _ _ _ _ |");
     printf("                                                                   |");
     printf("                                                                   |");
     printf("                                                                   |");
