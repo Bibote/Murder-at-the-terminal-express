@@ -14,7 +14,7 @@
 int main(int argc, char  *argv[])
 {
     
-    if(argc!=3)
+    if(argc==2)
     {
         if (strcmp(argv[1],"help")==0)
         {
