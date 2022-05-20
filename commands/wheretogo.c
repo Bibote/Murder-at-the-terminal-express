@@ -38,10 +38,10 @@ int main(int argc, char const *argv[])
     printf("               | room |     | room |     | Ahmed |   |  room  |                                   |               |                                         \n");
     printf("               |_ _ _ |     |_ _ _ |     | room  |   |_ _ _ _ |                                   |  smoking room |                                         \n");
     printf("                  ^            ^         |_ _ _ _|       ^                                        |_ _ _ _ _ _ _ _|                                         \n");
-    printf("                 \\\\        \\\\            ^          //                                                    ^                                                  \n");
-    printf("                  \\\\          \\\\         |        //                                                      |                                                  \n");
-    printf("                       \\\\     \\\\         |       //                                                       |                                                  \n");
-    printf("                          \\\\      \\\\     |     //                                                         |     \n");
+    printf("                 \\\\        \\\\              ^          //                                                  ^                                                  \n");
+    printf("                  \\\\          \\\\           |        //                                                    |                                                  \n");
+    printf("                       \\\\     \\\\           |       //                                                     |                                                  \n");
+    printf("                          \\\\      \\\\       |     //                                                       |     \n");
     printf("       _ _ _ _ _ _ _ _ _ _             _ _ _ _ _          _ _ _ _ _ _         _ _ _ _ _ _ _          _ _ _ _ _ _ _          _ _ _ _ _ _            _ _ _ _ _ _ \n");
     printf("      |                   |          |          |       |            |       |interrogation|       |              |        |            |        |            |\n");
     printf("      |    Luggageroom    | =======> | Corridor | ====> | Restaurant | ====> |room         | ====> | Crime scene  | =====> | Staff room | =====> | Locomotive |\n");
